@@ -1,0 +1,6 @@
+D:\Projects\JureHR\JureHR\bin\Debug\JureHR.dll
+D:\Projects\JureHR\JureHR\bin\Debug\JureHR.pdb
+D:\Projects\JureHR\JureHR\obj\Debug\JureHR.dll
+D:\Projects\JureHR\JureHR\obj\Debug\JureHR.pdb
+D:\Projects\JureHR\JureHR\obj\Debug\JureHR.csprojResolveAssemblyReference.cache
+D:\Projects\JureHR\JureHR\bin\Debug\JureHR.XML

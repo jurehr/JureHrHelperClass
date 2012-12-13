@@ -1,0 +1,3934 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JureHR</name>
+    </assembly>
+    <members>
+        <member name="T:JureHR.Validation">
+            <summary>
+            Class Validation
+            </summary>
+        </member>
+        <member name="T:JureHR.Validation.Standard">
+            <summary>
+            Validation For Standard variables
+            </summary>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsValid(System.String,JureHR.Validation.Standard.Type)">
+            <summary>
+            Validation 
+            </summary>
+            <param name="Str"></param>
+            <param name="ValidationType">Enum ValidationType</param>
+            <returns>returns bool</returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsValidEmailAddress(System.String)">
+            <summary>
+            <para>Validating Email Address</para>
+            </summary>
+            <param name="Email"></param>
+            <returns>Returns True or False</returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsValidEmailDomain(System.String)">
+            <summary>
+            Validates an email's domain
+            </summary>
+            <param name="EmailAddress">The email address to validate</param>
+            <returns>True on valid (can connect to end mail server), False if not valid</returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsPostalCode(System.String)">
+            <summary>
+            Validating Postal Code
+            </summary>
+            <param name="postalCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsValidPhone(System.String)">
+            <summary>
+            Validating Phone
+            </summary>
+            <param name="strPhoneInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsPositiveWholeNumber(System.String)">
+            <summary>
+             This function uses regular expression to match string pattern to validate whole number.
+            </summary>
+            <param name="strNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsInteger(System.String)">
+            <summary>
+            Integer function validate integer both positive and negative. Function return TRUE if valid integer found, if not function will return FALSE.
+            </summary>
+            <param name="strNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsAlpha(System.String)">
+            <summary>
+            Function To test for Alphabets.
+            </summary>
+            <param name="strToCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsAlphaNumeric(System.String)">
+            <summary>
+            Function to Check for AlphaNumeric.
+            </summary>
+            <param name="strToCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Validation.Standard.IsGUID(System.String)">
+            <summary>
+            Function to Check for GUID.
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.Validation.Standard.Type">
+            <summary>
+            Enum Validation Type
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.EMAIL">
+            <summary>
+            Email Validation
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.EMAILDOMAIN">
+            <summary>
+            Tries to conect to email server 
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.POSTALCODE">
+            <summary>
+            Postal Code Validation
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.PHONENUMBER">
+            <summary>
+            Phone Validation
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.NUMBER">
+            <summary>
+            Number Validation
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.POSITIVENUMBER">
+            <summary>
+            Positive Number Validation
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.ALPHA">
+            <summary>
+            Alpha Validation
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.ALPHANUMERIC">
+            <summary>
+            Alpha numeric Validation
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.Standard.Type.GUID">
+            <summary>
+            Guid Validation
+            </summary>
+        </member>
+        <member name="T:JureHR.Validation.CreditCard">
+            <summary>
+            Clredit Card Validation By Number
+            </summary>
+        </member>
+        <member name="M:JureHR.Validation.CreditCard.Validate(System.String,JureHR.Validation.CreditCard.CardType)">
+            <summary>
+            Validation of Credit Card by lenght, last digits and Luhn algorithm
+            </summary>
+            <param name="cardNumber"></param>
+            <param name="cardType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.Validation.CreditCard.CardType">
+            <summary>
+            Enum Type of credit Card
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.CreditCard.CardType.MasterCard">
+            <summary>
+            MasterCard Validation By Number
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.CreditCard.CardType.BankCard">
+            <summary>
+            BankCard Validation By Number
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.CreditCard.CardType.Visa">
+            <summary>
+            Visa Validation By Number
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.CreditCard.CardType.AmericanExpress">
+            <summary>
+            AmericanExpress Validation By Number
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.CreditCard.CardType.Discover">
+            <summary>
+            Discover Validation By Number
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.CreditCard.CardType.DinersClub">
+            <summary>
+            DinersClub Validation By Number
+            </summary>
+        </member>
+        <member name="F:JureHR.Validation.CreditCard.CardType.JCB">
+            <summary>
+            JCB Validation By Number
+            </summary>
+        </member>
+        <member name="T:JureHR.ActiveDirectory">
+            <summary>
+            Active Directory and Windows Accounts
+            </summary>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.#ctor">
+            <summary>
+            Active Directory Constructor
+            </summary>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GetWindowsAccounts">
+            <summary>
+            Get all accounts on local system with WMI
+            </summary>
+            <returns>populates a generic list with the Windows accounts on the local machine</returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.AddToGroup(System.String,System.String)">
+            <summary>
+            add a user to a group
+            </summary>
+            <param name="userDN"></param>
+            <param name="groupDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ChangePassword(System.String,System.String,System.String)">
+            <summary>
+            change a users password.
+            </summary>
+            <param name="userDn"></param>
+            <param name="oldPassword"></param>
+            <param name="newPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.CnExists(System.String,System.String)">
+            <summary>
+            find user by cn
+            </summary>
+            <param name="cn"></param>
+            <param name="baseDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.CreateUserAccount(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            create a user account
+            </summary>
+            <param name="parentOUDN"></param>
+            <param name="samName"></param>
+            <param name="userPassword"></param>
+            <param name="firstName"></param>
+            <param name="lastName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.DisableAccount(System.String)">
+            <summary>
+            disable an account
+            </summary>
+            <param name="userDn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.EmpIDtoSamName(System.String)">
+            <summary>
+            return samName from employeeID
+            </summary>
+            <param name="empID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.EnableAccount(System.String)">
+            <summary>
+            enable a user account
+            </summary>
+            <param name="userDn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GeneratePassword(System.String,System.Int32)">
+            <summary>
+            generate password based on seed string
+            </summary>
+            <param name="seed"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GeneratePassword(System.Int32)">
+            <summary>
+            generate password of given length
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GetDE">
+            <summary>
+            create directory entry object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GetDE(System.String)">
+            <summary>
+            create directory entry object
+            </summary>
+            <param name="baseDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GetDomainComputers">
+            <summary>
+            enum computers in domain
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GetOUComputers(System.String)">
+            <summary>
+            enum computers in domain
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GetDomainDN">
+            <summary>
+            gets the distinguished name of your domain
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.GetUserDN(System.String)">
+            <summary>
+            find user by sam name.
+            </summary>
+            <param name="samAccountName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.IncName(System.String)">
+            <summary>
+            increments a number on the end of a given samName until it is unique
+            </summary>
+            <param name="samInitial"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ListOUs">
+            <summary>
+            list top-level ous
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ListUsers">
+            <summary>
+            list Users in directory
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ListOUs(System.String)">
+            <summary>
+            list child ous of an object
+            </summary>
+            <param name="baseDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.MoveObject(System.String,System.String)">
+            <summary>
+            move an obect in active directory
+            </summary>
+            <param name="objectDN"></param>
+            <param name="targetDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.RemoveUserFromGroup(System.String,System.String)">
+            <summary>
+            remove a user from a group
+            </summary>
+            <param name="userDN"></param>
+            <param name="groupDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.RenameObject(System.String,System.String)">
+            <summary>
+            rename an AD object
+            </summary>
+            <param name="objectDn"></param>
+            <param name="newName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ResetPassword(System.String,System.String)">
+            <summary>
+            reset a users password
+            </summary>
+            <param name="userDn"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ReturnGroupDN(System.String)">
+            <summary>
+            get distinguished name of a group
+            </summary>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ReturnProperty(System.String,System.String,System.Boolean)">
+            <summary>
+            get AD property
+            </summary>
+            <param name="objectDN"></param>
+            <param name="propertyName"></param>
+            <param name="execute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ReturnProperty(System.String,System.String)">
+            <summary>
+            get AD property
+            </summary>
+            <param name="samAccountName"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ReturnPropertyNames(System.String)">
+            <summary>
+            return ad properties of an object
+            </summary>
+            <param name="objectDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.ReturnPropertyByCN(System.String,System.String,System.String)">
+            <summary>
+            return a property by cn
+            </summary>
+            <param name="cn"></param>
+            <param name="propertyName"></param>
+            <param name="baseOUDN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.SamExists(System.String)">
+            <summary>
+            find user by sam name.
+            </summary>
+            <param name="samAccountName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.SetProperty(System.String,System.String,System.String)">
+            <summary>
+            set value of property
+            </summary>
+            <param name="samAccountName"></param>
+            <param name="propertyName"></param>
+            <param name="newValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.SetProperty(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            set value of property
+            </summary>
+            <param name="objectDN"></param>
+            <param name="propertyName"></param>
+            <param name="newValue"></param>
+            <param name="execute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ActiveDirectory.SetProperty(System.String,System.String,System.Int32)">
+            <summary>
+            set value of property
+            </summary>
+            <param name="samAccountName"></param>
+            <param name="propertyName"></param>
+            <param name="newValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.Files">
+            <summary>
+            Class Files for File Manipulation
+            </summary>
+        </member>
+        <member name="M:JureHR.Files.UploadFile(System.String,System.String,System.String,System.String)">
+            <summary>
+            Methods to upload file to FTP Server
+            </summary>
+            <param name="FileName">local source file name</param>
+            <param name="UploadPath">Upload FTP path including Host name</param>
+            <param name="FTPUser">FTP login username</param>
+            <param name="FTPPass">FTP login password</param>
+        </member>
+        <member name="M:JureHR.Files.SaveByteArrayToFile(System.String,System.Byte[])">
+            <summary>
+            Function to save byte array to a file
+            </summary>
+            <param name="FileName">File name to save byte array</param>
+            <param name="ByteArray">Byte array to save to external file</param>
+            <returns>Return true if byte array save successfully, if not return false</returns>
+        </member>
+        <member name="M:JureHR.Files.FileToByteArray(System.String)">
+            <summary>
+            Function to get byte array from a file
+            </summary>
+            <param name="FileName">File name to get byte array</param>
+            <returns>Byte Array</returns>
+        </member>
+        <member name="M:JureHR.Files.CopyFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Copyes file
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="overwrite"></param>
+            <returns>returns bool</returns>
+        </member>
+        <member name="M:JureHR.Files.CopyDirectory(System.String,System.String)">
+            <summary>
+            Copy directory structure recursively
+            </summary>
+            <param name="Src"></param>
+            <param name="Dst"></param>
+        </member>
+        <member name="M:JureHR.Files.CreateTextFile(System.String)">
+            <summary>
+            Creates Txt File
+            </summary>
+            <param name="path"></param>
+            <returns>returns bool</returns>
+        </member>
+        <member name="M:JureHR.Files.DeleteFile(System.String)">
+            <summary>
+            Deletes File
+            </summary>
+            <param name="file"></param>
+            <returns>returns bool</returns>
+        </member>
+        <member name="M:JureHR.Files.CreateFreshTempDir">
+            <summary>
+            Create Fresh Temp Dir in Windows Temp Folder
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.GetNewTempFile">
+            <summary>
+            Create Fresh Temp file in C://
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.FormatSize(System.Double)">
+            <summary>
+            formats file size when provided in bytes
+            </summary>
+            <param name="FileSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.FormatSize(System.Double,System.Int32)">
+            <summary>
+            formats file size when provided in bytes
+            </summary>
+            <param name="FileSize"></param>
+            <param name="DecimalPlaces"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.GetFolderSize(System.String)">
+            <summary>
+            gets folder tree size in bytes
+            </summary>
+            <param name="physicalPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.MoveFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Moves File
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="overwrite"></param>
+            <returns>returns bool</returns>
+        </member>
+        <member name="M:JureHR.Files.ReadTextFile(System.String)">
+            <summary>
+            read text file to string array
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.WriteTextFile(System.String)">
+            <summary>
+            returns StreamWriter to a file
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.WriteToStartOfFile(System.String,System.String)">
+            <summary>
+            method for adding new data to the beginning of a file
+            </summary>
+            <param name="file">the file we're adding to</param>
+            <param name="newValue">the value we want to write</param>
+        </member>
+        <member name="M:JureHR.Files.CompressGZip(System.Byte[])">
+            <summary>
+            Compresses byte array to new byte array.
+            </summary>
+        </member>
+        <member name="M:JureHR.Files.DecompressGZip(System.Byte[])">
+            <summary>
+            Decompress byte array to new byte array
+            </summary>
+            <param name="gzip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.GetFiles(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+             method for retrieving files from a directory using LINQ
+            </summary>
+            <param name="dir">directory we want searched</param>
+            <param name="patterns">search patterns we're using example: "*.sys"</param>
+            <returns>list of matching files</returns>
+        </member>
+        <member name="M:JureHR.Files.MergeFiles(System.String,System.String)">
+            <summary>
+            method for merging 2 files into a single file
+            </summary>
+            <param name="fileToAppendTo">the file to merge with</param>
+            <param name="fileToAppend">the file to merge</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.SplitFilePerMB(System.String,System.Int32)">
+            <summary>
+            Split File Per MB
+            </summary>
+            <param name="SourceFile">"C:\\Test\\Test.txt"</param>
+            <param name="sizeInMB">Size of file in MB</param>
+            <returns>Returns bool</returns>
+        </member>
+        <member name="M:JureHR.Files.SplitFilePerNumOfFiles(System.String,System.Int32)">
+            <summary>
+            Split File Per Num Of Files you select
+            </summary>
+            <param name="SourceFile">"C:\\Test\\Test.txt"</param>
+            <param name="nNoofFiles">Number of files to divide</param>
+            <returns>Returns bool</returns>
+        </member>
+        <member name="M:JureHR.Files.MergeFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Merge Multiple Files in one
+            </summary>
+            <param name="imputFolderName">Path to the folder eg:"C:\\Test\\"</param>
+            <param name="saveFileFolder">Path to save folder eg:"C:\\"</param>
+            <param name="deleteTemp">Option to delete files after they merge</param>
+            <returns>Bool value</returns>
+        </member>
+        <member name="M:JureHR.Files.UniqueFileName(System.String)">
+             <summary>
+            over loaded version where extension doesn't thave to be .tmp
+             </summary>
+             <param name="extension"></param>
+             <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.GetSafeFilename(System.String)">
+            <summary>
+            Replaces filename ilegal caracters with underscore 
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.GetSafePathname(System.String)">
+            <summary>
+            Replaces pathname ilegal caracters with underscore 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.PutLineAt(System.String,System.Int32,System.String)">
+            <summary>
+            inserts line into a file at given position (line number)
+            </summary>
+            <param name="fName"></param>
+            <param name="lineNumber"></param>
+            <param name="lineX"></param>
+        </member>
+        <member name="M:JureHR.Files.ValidateFile(System.String,System.Int64,System.String,System.String,System.String)">
+            <summary>
+            Verifies the file is corect size or hash
+            </summary>
+            <param name="file"></param>
+            <param name="length"></param>
+            <param name="md5">Optional</param>
+            <param name="sha1">Optional</param>
+            <param name="crc32">Optional</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.ReturnMIMEType(System.String)">
+            <summary>
+            Returns MIME type of given file extension
+            </summary>
+            <param name="fileExtension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.GetMD5Hash(System.String)">
+            <summary>
+            Get MD5 Hash
+            </summary>
+            <param name="pathName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Files.GetSHA1Hash(System.String)">
+            <summary>
+            Get SHA1 Hash
+            </summary>
+            <param name="pathName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.Json">
+            <summary>
+            This class encodes and decodes Json strings.
+            Spec. details, see http://www.json.org/
+            
+            Json uses Arrays and Objects. These correspond here to the datatypes List of object and Hashtable.
+            All numbers are parsed to doubles.
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_NONE">
+            <summary>
+            0
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_CURLY_OPEN">
+            <summary>
+            1
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_CURLY_CLOSE">
+            <summary>
+            2
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_SQUARED_OPEN">
+            <summary>
+            3
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_SQUARED_CLOSE">
+            <summary>
+            4
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_COLON">
+            <summary>
+            5
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_COMMA">
+            <summary>
+            6
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_STRING">
+            <summary>
+            7
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_NUMBER">
+            <summary>
+            8
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_TRUE">
+            <summary>
+            9
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_FALSE">
+            <summary>
+            10
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.TOKEN_NULL">
+            <summary>
+            11
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.BUILDER_CAPACITY">
+            <summary>
+            The maximum string length that this class can parse
+            </summary>
+        </member>
+        <member name="M:JureHR.Json.JsonDecode(System.String)">
+            <summary>
+            Parses the string json into a value
+            </summary>
+            <param name="json">A Json string.</param>
+            <returns>An Listof object, a Hashtable, a double, a string, null, true, or false</returns>
+        </member>
+        <member name="M:JureHR.Json.JsonEncode(System.Object)">
+            <summary>
+            Converts a Hashtable / List of object object into a Json string
+            </summary>
+            <param name="json">A Hashtable / List of object</param>
+            <returns>A Json encoded string, or null if object 'json' is not serializable</returns>
+        </member>
+        <member name="M:JureHR.Json.LastDecodeSuccessful">
+            <summary>
+            On decoding, this function returns the position at which the parse failed (-1 = no error).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.GetLastErrorIndex">
+            <summary>
+            On decoding, this function returns the position at which the parse failed (-1 = no error).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.GetLastErrorSnippet">
+            <summary>
+            If a decoding error occurred, this function returns a piece of the Json string 
+            at which the error took place. To ease debugging.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.MakeJsonOfDataTable(System.Data.DataTable,System.String[])">
+            <summary>
+            code to convert DataTable to JSON
+            </summary>
+            <param name="table"></param>
+            <param name="stringName"></param>
+            <returns>JSON string</returns>
+        </member>
+        <member name="M:JureHR.Json.ParseObject(System.Char[],System.Int32@)">
+            <summary>
+            Parse Object
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.ParseArray(System.Char[],System.Int32@)">
+            <summary>
+            ParseArray
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.ParseValue(System.Char[],System.Int32@,System.Boolean@)">
+            <summary>
+            ParseValue
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <param name="success"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.ParseString(System.Char[],System.Int32@)">
+            <summary>
+            ParseString
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.ParseNumber(System.Char[],System.Int32@)">
+            <summary>
+            ParseNumber
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.GetLastIndexOfNumber(System.Char[],System.Int32)">
+            <summary>
+            GetLastIndexOfNumber
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.EatWhitespace(System.Char[],System.Int32@)">
+            <summary>
+            EatWhitespace
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:JureHR.Json.LookAhead(System.Char[],System.Int32)">
+            <summary>
+            LookAhead
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.NextToken(System.Char[],System.Int32@)">
+            <summary>
+            NextToken
+            </summary>
+            <param name="json"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.SerializeObjectOrArray(System.Object,System.Text.StringBuilder)">
+            <summary>
+            SerializeObjectOrArray
+            </summary>
+            <param name="objectOrArray"></param>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.SerializeObject(System.Collections.Hashtable,System.Text.StringBuilder)">
+            <summary>
+            SerializeObject
+            </summary>
+            <param name="anObject"></param>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.SerializeArray(System.Collections.Generic.List{System.Object},System.Text.StringBuilder)">
+            <summary>
+            SerializeArray
+            </summary>
+            <param name="anArray"></param>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.SerializeValue(System.Object,System.Text.StringBuilder)">
+            <summary>
+            SerializeValue
+            </summary>
+            <param name="value"></param>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Json.SerializeString(System.String,System.Text.StringBuilder)">
+            <summary>
+            SerializeString
+            </summary>
+            <param name="aString"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="M:JureHR.Json.SerializeNumber(System.Double,System.Text.StringBuilder)">
+            <summary>
+            SerializeNumber
+            </summary>
+            <param name="number"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="M:JureHR.Json.IsNumeric(System.Object)">
+            <summary>
+            Determines if a given object is numeric in any way
+            (can be integer, double, etc). C# has no pretty way to do this.
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.lastErrorIndex">
+            <summary>
+            On decoding, this value holds the position at which the parse failed (-1 = no error).
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.lastDecodedJson">
+            <summary>
+            Stores the last string we tries to decode
+            </summary>
+        </member>
+        <member name="F:JureHR.Json.instance">
+            <summary>
+            A static reference of the class
+            </summary>
+        </member>
+        <member name="T:JureHR.DBFunctions">
+            <summary>
+            Database Functions
+            </summary>
+        </member>
+        <member name="T:JureHR.DBFunctions.DBSql">
+            <summary>
+            SQL Database Functions
+            </summary>
+        </member>
+        <member name="F:JureHR.DBFunctions.DBSql.transaction">
+            <summary>
+            SqlTransaction
+            </summary>
+        </member>
+        <member name="F:JureHR.DBFunctions.DBSql.connection">
+            <summary>
+            SqlConnection
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.#ctor(System.String)">
+            <summary>
+            SQL Database Functions Constructor
+            </summary>
+            <param name="ConnectionName">Connection Name Set in Web.Config configuration , connectionStrings</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.#ctor(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            SQL Database Functions Constructor with inhereted connection
+            </summary>
+            <param name="ConnectionName">Connection Name Set in Web.Config configuration , connectionStrings</param>
+            <param name="connection">SqlConnection</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.#ctor(System.String,System.Data.SqlClient.SqlTransaction)">
+            <summary>
+            SQL Database Functions Constructor with inhereted transaction
+            </summary>
+            <param name="ConnectionName">Connection Name Set in Web.Config configuration , connectionStrings</param>
+            <param name="transaction">SqlTransaction</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.CheckDatabaseConnection(System.String)">
+            <summary>
+            Check Database Connection
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.OpenConection(System.String)">
+            <summary>
+            Retrieves the connection string from the calling application .config file.
+            The connection string must be in an application setting called 
+            "ConnectionString".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.getTransaction">
+            <summary>
+            Gets the current SQL Server transaction
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.getConnection">
+            <summary>
+            Gets the current SQL Server connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.setTransaction(System.Data.SqlClient.SqlTransaction)">
+            <summary>
+            Sets a SQL Server SqlTransaction to Trans and starts it (calls startTransaction)
+            </summary>
+            <param name="transaction"></param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.startBrandNewConnection">
+            <summary>
+            Similar to startConnection(), but it nulls an existent connection in case of any 
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.startConnection">
+            <summary>
+            Starts a new SQL Server connection
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.startConnectionWithOpenOption">
+            <summary>
+            Opens a SQL Server connection when there's a outstanding connection
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.closeConnection">
+            <summary>
+            Closes a SQL Server connection
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.startTransaction">
+            <summary>
+            Begins a SQL Server transaction
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.commitTransaction">
+            <summary>
+            Commits a SQL Server transaction
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.commitTransactionAndDisposeConnection">
+            <summary>
+            Commits a transaction and disposes the connection
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.rollbackTransaction">
+            <summary>
+            Rolls back a SQL Server transaction 
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetConnectionString">
+            <summary>
+            Retrieves the connection string from the calling application .config file.
+            The connection string must be in an application setting called 
+            "ConnectionString".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ReadValue(System.String,System.String)">
+            <summary>
+            Returns the value of the given field after running the given SQL Select statement
+            </summary>
+            <param name="selectStatement">An SQL Select statement</param>
+            <param name="field">The field to look for</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ReadValues(System.String,System.String)">
+            <summary>
+            running the given SQL Select statement
+            </summary>
+            <param name="selectStatement">An SQL Select statement</param>
+            <param name="field">The field to look for</param>
+            <returns>Returns an "see cref="List string"/" of the values of the given field after</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.PrepareCommand(System.Data.SqlClient.SqlCommand,System.Data.CommandType,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            This method opens (if necessary) and assigns a connection, transaction, command type and parameters 
+            to the provided command
+            </summary>
+            <param name="command">The SqlCommand to be prepared</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="commandParameters">An array of SqlParameters to be associated with the command or 'null' if no parameters are required</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.PrepareCommand(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.Data.CommandType,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            This method opens (if necessary) and assigns a connection, transaction, command type and parameters 
+            to the provided command
+            </summary>
+            <param name="command">The SqlCommand to be prepared</param>
+            <param name="connection">A valid SqlConnection, on which to execute this command</param>
+            <param name="transaction">A valid SqlTransaction, or 'null'</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="commandParameters">An array of SqlParameters to be associated with the command or 'null' if no parameters are required</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.AssignParameterValues(System.Data.SqlClient.SqlParameter[],System.Object[])">
+            <summary>
+            This method assigns an array of values to an array of SqlParameters
+            </summary>
+            <param name="commandParameters">Array of SqlParameters to be assigned values</param>
+            <param name="parameterValues">Array of objects holding the values to be assigned</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.AttachParameters(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            This method is used to attach array of SqlParameters to a SqlCommand.
+            
+            This method will assign a value of DbNull to any parameter with a direction of
+            InputOutput and a value of null.  
+            
+            This behavior will prevent default values from being used, but
+            this will be the less common case than an intended pure output parameter (derived as InputOutput)
+            where the user provided no input value.
+            </summary>
+            <param name="command">The command to which the parameters will be added</param>
+            <param name="commandParameters">An array of SqlParameters to be added to command</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.AssignParameterValues(System.Data.SqlClient.SqlParameter[],System.Data.DataRow)">
+            <summary>
+            This method assigns dataRow column values to an array of SqlParameters
+            </summary>
+            <param name="commandParameters">Array of SqlParameters to be assigned values</param>
+            <param name="dataRow">The dataRow used to hold the stored procedure's parameter values</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLookup(System.String,System.String,System.String)">
+            <summary>
+            Looks up the value of a field into a given table according to the
+            given criteria
+            </summary>
+            <param name="field">The name of the field to lookup</param>
+            <param name="table">The name of the table</param>
+            <param name="criteria">Criteria expression</param>
+            <returns>The value of the field</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLookupMult(System.String,System.String)">
+            <summary>
+            Returns all values of a field from the given table
+            </summary>
+            <param name="field">The name of the field to lookup</param>
+            <param name="table">The name of the table</param>
+            <returns>The values of the field</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLookupMult(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns all values of a field from the given table according to the
+            given criteria
+            </summary>
+            <param name="field">The name of the field to lookup</param>
+            <param name="table">The name of the table</param>
+            <param name="criteria">Criteria expression</param>
+            <param name="sortField">Sort Field</param>
+            <returns>The values of the field matching the criteria</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLookup(System.String,System.String,System.Guid)">
+            <summary>
+            Looks up the value of a field into a given table at the
+            specified row
+            </summary>
+            <param name="field">The name of the field to lookup</param>
+            <param name="table">The name of the table</param>
+            <param name="primaryKey">The primary key of the row</param>
+            <returns>The value of the field</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DMax(System.String,System.String)">
+            <summary>
+            Returns the maximum value of the field on the given table
+            </summary>
+            <param name="field">The field to check for</param>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DMax(System.String,System.String,System.String)">
+            <summary>
+            Returns the maximum value of the field on the given table according to the
+            given criteria
+            </summary>
+            <param name="field">The field to check for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">Expression to follow a WHERE clause</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DMax(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Returns the maximum values of the field on the given table according to the
+            given criteria, in a given order
+            </summary>
+            <param name="field">The field to check for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">Expression to follow a WHERE clause</param>
+            <param name="howMany">The number of top records to retrieve</param>
+            <param name="orderField">The field to order by</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DMin(System.String,System.String)">
+            <summary>
+            Returns the minimum value of the field on the given table
+            </summary>
+            <param name="field">The field to check for</param>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DMin(System.String,System.String,System.String)">
+            <summary>
+            Returns the minimum value of the field on the given table according to the
+            given criteria
+            </summary>
+            <param name="field">The field to check for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">Expression to follow a WHERE clause</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DMin(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Returns the minimum values of the field on the given table according to the
+            given criteria, in a given order
+            </summary>
+            <param name="field">The field to check for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">Expression to follow a WHERE clause</param>
+            <param name="howMany">The number of bottom records to retrieve</param>
+            <param name="orderField">The field to order by</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DFirst(System.String)">
+            <summary>
+            Returns the <see cref="T:System.Guid"/> of the first record in the table
+            </summary>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DFirst(System.String,System.String)">
+            <summary>
+            Returns the value of the field at the first record in the table
+            </summary>
+            <param name="field">The field to look for</param>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DFirst(System.String,System.String,System.String)">
+            <summary>
+            Returns the value of the field at the first record in the table according to the
+            given criteria
+            </summary>
+            <param name="field">The field to look for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">SQL criteria</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DFirst(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Returns the values of the field at the first records in the table according to the
+            given criteria
+            </summary>
+            <param name="field">The field to look for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">SQL criteria</param>
+            <param name="howMany">The number of records to retrieve</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLast(System.String)">
+            <summary>
+            Returns the <see cref="T:System.Guid"/> of the last record in the table
+            </summary>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLast(System.String,System.String)">
+            <summary>
+            Returns the value of the field at the last record in the table
+            </summary>
+            <param name="field">The field to look for</param>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLast(System.String,System.String,System.String)">
+            <summary>
+            Returns the value of the field at the first record in the table according to the
+            given criteria
+            </summary>
+            <param name="field">The field to look for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">SQL criteria</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DLast(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Returns the values of the field at the last records in the table according to the
+            given criteria
+            </summary>
+            <param name="field">The field to look for</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">SQL criteria</param>
+            <param name="howMany">The number of records to retrieve</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DSum(System.String,System.String)">
+            <summary>
+            Sums the values of all the records at the given field of the table
+            </summary>
+            <param name="field">The field to sum</param>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DSum(System.String,System.String,System.String)">
+            <summary>
+            Sums the values of the records at the given field of the table according to 
+            the given criteria
+            </summary>
+            <param name="field">The field to sum</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">SQL criteria</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DAverage(System.String,System.String)">
+            <summary>
+            Returns the average of the values of all the records at the given field of the table
+            </summary>
+            <param name="field">The field to sum</param>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DAverage(System.String,System.String,System.String)">
+            <summary>
+            Returns the average of the values of the records at the given field of the table according to 
+            the given criteria
+            </summary>
+            <param name="field">The field to summarise</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">SQL criteria</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DCount(System.String)">
+            <summary>
+            Counts all the records of the table
+            </summary>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DCount(System.String,System.String)">
+            <summary>
+            Counts all the records of the table that match the given criteria
+            </summary>
+            <param name="table">The table to query</param>
+            <param name="field">SQL criteria</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DCount(System.String,System.String,System.String)">
+            <summary>
+            Counts all the records of the table that match the given criteria
+            </summary>
+            <param name="field">Table Fiels</param>
+            <param name="table">The table to query</param>
+            <param name="criteria">SQL criteria</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.String)">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="getTable">Get Table Named</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlConnection,System.String)">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="connection">Opend or unopend SqlConnection</param>
+            <param name="getTable">Get Table Named</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlTransaction,System.String)">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="transaction">Opend or unopend SqlTransaction</param>
+            <param name="getTable">Get Table Named</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.String,System.String)">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="getTable">Get Table Named</param>
+            <param name="tableName">Name Of Table in DataTable</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlConnection,System.String,System.String)">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="connection">Opend or unopend SqlConnection</param>
+            <param name="getTable">Get Table Named</param>
+            <param name="tableName">Name Of Table in DataTable</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlTransaction,System.String,System.String)">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="transaction">Opend or unopend SqlTransaction</param>
+            <param name="getTable">Get Table Named</param>
+            <param name="tableName">Name Of Table in DataTable</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String,System.String)">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="connection">Opend or unopend SqlConnection</param>
+            <param name="transaction">Opend or unopend SqlTransaction</param>
+            <param name="getTable">Get Table Named</param>
+            <param name="tableName">Name Of Table in DataTable</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="sqlStatement">SQL query</param>
+            <param name="arrParam"> new SqlParameter("@Param1", "Param1")</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlConnection,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="connection">Opend or unopend SqlConnection</param>
+            <param name="sqlStatement">SQL query</param>
+            <param name="arrParam"> new SqlParameter("@Param1", "Param1")</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlTransaction,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="transaction">Opend or unopend SqlTransaction</param>
+            <param name="sqlStatement">SQL query</param>
+            <param name="arrParam"> new SqlParameter("@Param1", "Param1")</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetDataTable(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Get Data Table
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="connection">Opend or unopend SqlConnection</param>
+            <param name="transaction">Opend or unopend SqlTransaction</param>
+            <param name="sqlStatement">SQL query</param>
+            <param name="arrParam"> new SqlParameter("@Param1", "Param1")</param>
+            <returns>populated DataTable</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.String,System.Data.DataSet)">
+            <summary>
+            Get Data Set
+            <para>connects to SQL server and executes SQL statement and return DataTable.</para>
+            </summary>
+            <param name="getTable"></param>
+            <param name="dataSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.CommandType,System.String,System.Data.DataSet,System.String[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset and takes no parameters) against the database specified in 
+            the connection string. 
+            </summary>
+            <remarks>
+            e.g.:  
+             FillDataset(connString, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"});
+            </remarks>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.CommandType,System.String,System.Data.DataSet,System.String[],System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset) against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <remarks>
+            e.g.:  
+             FillDataset(connString, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"}, new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="commandParameters">An array of SqlParamters used to execute the command</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.String,System.Data.DataSet,System.String[],System.Object[])">
+            <summary>
+            Execute a stored procedure via a SqlCommand (that returns a resultset) against the database specified in 
+            the connection string using the provided parameter values.  This method will query the database to discover the parameters for the 
+            stored procedure (the first time each stored procedure is called), and assign the values based on parameter order.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            
+            e.g.:  
+             FillDataset(connString, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"}, 24);
+            </remarks>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>    
+            <param name="parameterValues">An array of objects to be assigned as the input values of the stored procedure</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.SqlClient.SqlConnection,System.Data.CommandType,System.String,System.Data.DataSet,System.String[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset and takes no parameters) against the provided SqlConnection. 
+            </summary>
+            <remarks>
+            e.g.:  
+             FillDataset(conn, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"});
+            </remarks>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>    
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.SqlClient.SqlConnection,System.Data.CommandType,System.String,System.Data.DataSet,System.String[],System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset) against the specified SqlConnection 
+            using the provided parameters.
+            </summary>
+            <remarks>
+            e.g.:  
+             FillDataset(conn, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"}, new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>
+            <param name="commandParameters">An array of SqlParamters used to execute the command</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.SqlClient.SqlConnection,System.String,System.Data.DataSet,System.String[],System.Object[])">
+            <summary>
+            Execute a stored procedure via a SqlCommand (that returns a resultset) against the specified SqlConnection 
+            using the provided parameter values.  This method will query the database to discover the parameters for the 
+            stored procedure (the first time each stored procedure is called), and assign the values based on parameter order.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            
+            e.g.:  
+             FillDataset(conn, "GetOrders", ds, new string[] {"orders"}, 24, 36);
+            </remarks>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>
+            <param name="parameterValues">An array of objects to be assigned as the input values of the stored procedure</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.SqlClient.SqlTransaction,System.Data.CommandType,System.String,System.Data.DataSet,System.String[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset and takes no parameters) against the provided SqlTransaction. 
+            </summary>
+            <remarks>
+            e.g.:  
+             FillDataset(trans, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"});
+            </remarks>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.SqlClient.SqlTransaction,System.Data.CommandType,System.String,System.Data.DataSet,System.String[],System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset) against the specified SqlTransaction
+            using the provided parameters.
+            </summary>
+            <remarks>
+            e.g.:  
+             FillDataset(trans, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"}, new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>
+            <param name="commandParameters">An array of SqlParamters used to execute the command</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.SqlClient.SqlTransaction,System.String,System.Data.DataSet,System.String[],System.Object[])">
+            <summary>
+            Execute a stored procedure via a SqlCommand (that returns a resultset) against the specified 
+            SqlTransaction using the provided parameter values.  This method will query the database to discover the parameters for the 
+            stored procedure (the first time each stored procedure is called), and assign the values based on parameter order.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            
+            e.g.:  
+             FillDataset(trans, "GetOrders", ds, new string[]{"orders"}, 24, 36);
+            </remarks>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>
+            <param name="parameterValues">An array of objects to be assigned as the input values of the stored procedure</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.FillDataset(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.Data.CommandType,System.String,System.Data.DataSet,System.String[],System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Private helper method that execute a SqlCommand (that returns a resultset) against the specified SqlTransaction and SqlConnection
+            using the provided parameters.
+            </summary>
+            <remarks>
+            e.g.:  
+             FillDataset(conn, trans, CommandType.StoredProcedure, "GetOrders", ds, new string[] {"orders"}, new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="dataSet">A dataset wich will contain the resultset generated by the command</param>
+            <param name="tableNames">This array will be used to create table mappings allowing the DataTables to be referenced
+            by a user defined name (probably the actual table name)
+            </param>
+            <param name="commandParameters">An array of SqlParamters used to execute the command</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.CommandType,System.String)">
+            <summary>
+            Execute a SqlCommand (that returns a resultset and takes no parameters) against the database specified in 
+            the connection string. 
+            </summary>
+            <remarks>
+            e.g.:  
+             DataSet ds = ExecuteDataset(connString, CommandType.StoredProcedure, "GetOrders");
+            </remarks>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.CommandType,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset) against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <remarks>
+            e.g.:  
+             DataSet ds = ExecuteDataset(connString, CommandType.StoredProcedure, "GetOrders", new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="commandParameters">An array of SqlParamters used to execute the command</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.String,System.Object[])">
+            <summary>
+            Execute a stored procedure via a SqlCommand (that returns a resultset) against the database specified in 
+            the connection string using the provided parameter values.  This method will query the database to discover the parameters for the 
+            stored procedure (the first time each stored procedure is called), and assign the values based on parameter order.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            
+            e.g.:  
+             DataSet ds = ExecuteDataset(connString, "GetOrders", 24, 36);
+            </remarks>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="parameterValues">An array of objects to be assigned as the input values of the stored procedure</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.SqlClient.SqlConnection,System.Data.CommandType,System.String)">
+            <summary>
+            Execute a SqlCommand (that returns a resultset and takes no parameters) against the provided SqlConnection. 
+            </summary>
+            <remarks>
+            e.g.:  
+             DataSet ds = ExecuteDataset(conn, CommandType.StoredProcedure, "GetOrders");
+            </remarks>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.SqlClient.SqlConnection,System.Data.CommandType,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset) against the specified SqlConnection 
+            using the provided parameters.
+            </summary>
+            <remarks>
+            e.g.:  
+             DataSet ds = ExecuteDataset(conn, CommandType.StoredProcedure, "GetOrders", new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="commandParameters">An array of SqlParamters used to execute the command</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.SqlClient.SqlConnection,System.String,System.Object[])">
+            <summary>
+            Execute a stored procedure via a SqlCommand (that returns a resultset) against the specified SqlConnection 
+            using the provided parameter values.  This method will query the database to discover the parameters for the 
+            stored procedure (the first time each stored procedure is called), and assign the values based on parameter order.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            
+            e.g.:  
+             DataSet ds = ExecuteDataset(conn, "GetOrders", 24, 36);
+            </remarks>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="parameterValues">An array of objects to be assigned as the input values of the stored procedure</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.SqlClient.SqlTransaction,System.Data.CommandType,System.String)">
+            <summary>
+            Execute a SqlCommand (that returns a resultset and takes no parameters) against the provided SqlTransaction. 
+            </summary>
+            <remarks>
+            e.g.:  
+             DataSet ds = ExecuteDataset(trans, CommandType.StoredProcedure, "GetOrders");
+            </remarks>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.SqlClient.SqlTransaction,System.Data.CommandType,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute a SqlCommand (that returns a resultset) against the specified SqlTransaction
+            using the provided parameters.
+            </summary>
+            <remarks>
+            e.g.:  
+             DataSet ds = ExecuteDataset(trans, CommandType.StoredProcedure, "GetOrders", new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="commandParameters">An array of SqlParamters used to execute the command</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteDataset(System.Data.SqlClient.SqlTransaction,System.String,System.Object[])">
+            <summary>
+            Execute a stored procedure via a SqlCommand (that returns a resultset) against the specified 
+            SqlTransaction using the provided parameter values.  This method will query the database to discover the parameters for the 
+            stored procedure (the first time each stored procedure is called), and assign the values based on parameter order.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            
+            e.g.:  
+             DataSet ds = ExecuteDataset(trans, "GetOrders", 24, 36);
+            </remarks>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="parameterValues">An array of objects to be assigned as the input values of the stored procedure</param>
+            <returns>A dataset containing the resultset generated by the command</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.UpdateDataset(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlCommand,System.Data.DataSet,System.String)">
+            <summary>
+            Executes the respective command for each inserted, updated, or deleted row in the DataSet.
+            </summary>
+            <remarks>
+            e.g.:  
+             UpdateDataset(conn, insertCommand, deleteCommand, updateCommand, dataSet, "Order");
+            </remarks>
+            <param name="insertCommand">A valid transact-SQL statement or stored procedure to insert new records into the data source</param>
+            <param name="deleteCommand">A valid transact-SQL statement or stored procedure to delete records from the data source</param>
+            <param name="updateCommand">A valid transact-SQL statement or stored procedure used to update records in the data source</param>
+            <param name="dataSet">The DataSet used to update the data source</param>
+            <param name="tableName">The DataTable used to update the data source.</param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.RecordExists(System.String)">
+            <summary>
+            Record Exists
+            <para>connects to SQL server and executes SQL statement to determine whether the given record exists in the database.</para>
+            </summary>
+            <param name="SQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.RecordExists(System.Data.SqlClient.SqlConnection,System.String)">
+            <summary>
+            Record Exists
+            <para>connects to SQL server and executes SQL statement to determine whether the given record exists in the database.</para>
+            </summary>
+            <param name="connection"></param>
+            <param name="SQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.RecordExists(System.Data.SqlClient.SqlTransaction,System.String)">
+            <summary>
+            Record Exists
+            <para>connects to SQL server and executes SQL statement to determine whether the given record exists in the database.</para>
+            </summary>
+            <param name="transaction"></param>
+            <param name="SQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.RecordExists(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String)">
+            <summary>
+            Record Exists
+            <para>connects to SQL server and executes SQL statement to determine whether the given record exists in the database.</para>
+            </summary>
+            <param name="connection"></param>
+            <param name="transaction"></param>
+            <param name="SQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DUpdate(System.String,System.String,System.String,System.String)">
+            <summary>
+            Update a field of the given table for records that match the given criteria
+            to a new value
+            </summary>
+            <param name="field">The field to update</param>
+            <param name="table">The table</param>
+            <param name="criteria">SQL Criteria</param>
+            <param name="newValue">New value</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DUpdate(System.Data.SqlClient.SqlConnection,System.String,System.String,System.String,System.String)">
+            <summary>
+            Update a field of the given table for records that match the given criteria
+            to a new value
+            </summary>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="field">The field to update</param>
+            <param name="table">The table</param>
+            <param name="criteria">SQL Criteria</param>
+            <param name="newValue">New value</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DUpdate(System.Data.SqlClient.SqlTransaction,System.String,System.String,System.String,System.String)">
+            <summary>
+            Update a field of the given table for records that match the given criteria
+            to a new value
+            </summary>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="field">The field to update</param>
+            <param name="table">The table</param>
+            <param name="criteria">SQL Criteria</param>
+            <param name="newValue">New value</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DUpdate(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String,System.String,System.String,System.String)">
+            <summary>
+            Update a field of the given table for records that match the given criteria
+            to a new value
+            </summary>
+            <param name="connection">A valid SqlConnection</param>
+            <param name="transaction">A valid SqlTransaction</param>
+            <param name="field">The field to update</param>
+            <param name="table">The table</param>
+            <param name="criteria">SQL Criteria</param>
+            <param name="newValue">New value</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DBInsert(System.String[],System.String,System.Object[],System.Guid)">
+            <summary>
+            Insert the given values at the specified fields name of the table
+            </summary>
+            <param name="fieldNames">String array of field names</param>
+            <param name="table">The table</param>
+            <param name="values">Object array of values (must be same length as 
+            fieldNames)</param>
+            <param name="userID">Guid</param>
+            <returns>The see cref="Guid"/ of the record inserted</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DBExecuteScalar(System.String)">
+            <summary>
+            Returns the latest identity used within the scope of that user statement
+            </summary>
+            <param name="SQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DBDelete(System.Guid,System.String)">
+            <summary>
+            Removes the record with the specified key from the table
+            </summary>
+            <param name="primaryKey">The primary key as <see cref="T:System.Guid"/></param>
+            <param name="table">The table</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DBDelete(System.Guid[],System.String)">
+            <summary>
+            Removes the records with the specified keys from the table
+            </summary>
+            <param name="primaryKeys">The primary keys as see cref="Guid"/ array</param>
+            <param name="table">The table</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DBDelete(System.String,System.String)">
+            <summary>
+            Removes the records that match the given from the table
+            </summary>
+            <param name="criteria">SQL Criteria</param>
+            <param name="table">The table</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetKeyField(System.String)">
+            <summary>
+            Retrieves the name of the primary key field for the given table
+            </summary>
+            <param name="tableName">The table</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.DGetColumnNames(System.String)">
+            <summary>
+            Get All Column Names
+            </summary>
+            <param name="table">The table to query</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteReaderQuery(System.String)">
+            <summary>
+            Execute a SELECT query directly on the server
+            </summary>
+            <param name="commandText">The SELECT statement text</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.ExecuteNonReader(System.String)">
+            <summary>
+            Execute a non-reader (update, insert, delete) query directly on the server
+            </summary>
+            <param name="commandText">The SQL statement text</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.InsertUpdateImage(System.String,System.Drawing.Image,System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Insert Update Image
+            <para>connects to SQL server and executes SQL statement and update/insert binary image data in database table</para>
+            </summary>
+            <param name="SQL"></param>
+            <param name="Image"></param>
+            <param name="ImageFieldName"></param>
+            <param name="ImageFormat"></param>
+            <returns>returns row id</returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.GetImageFromDB(System.String)">
+            <summary>
+            Scalar To Image
+            <para>Connects to SQL server and executes SQL statement and returns the binary image data from database</para>
+            </summary>
+            <param name="SQL"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JureHR.DBFunctions.DBSql.ConnName">
+            <summary>
+            Connection Name Set in Web.Config configuration , connectionStrings
+            </summary>
+        </member>
+        <member name="T:JureHR.DBFunctions.DBSql.TryParseValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Object,System.Int32)">
+            <summary>
+            Holds 32-bit signed integers. 
+            The smallest possible value of an int variable is -2,147,483,648; 
+            the largest possible value is 2,147,483,647. 
+            </summary>
+            <value>int: (int)1.1</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Data.DataRow,System.String,System.Int32)">
+            <summary>
+            Holds 32-bit signed integers. 
+            The smallest possible value of an int variable is -2,147,483,648; 
+            the largest possible value is 2,147,483,647. 
+            </summary>
+            <value>int: (int)1.1</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Object,System.Single)">
+             <summary>
+            Holds a 32-bit signed floating-point value. 
+            The smallest possible value of a float type is approximately 1.5 times 10 to the 45th power; 
+            the largest possible value is approximately 3.4 times 10 to the 38th power. 
+             </summary>
+             <value>float: (float)3.5 or 3.5F or 3.5f</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Data.DataRow,System.String,System.Single)">
+             <summary>
+            Holds a 32-bit signed floating-point value. 
+            The smallest possible value of a float type is approximately 1.5 times 10 to the 45th power; 
+            the largest possible value is approximately 3.4 times 10 to the 38th power. 
+             </summary>
+             <value>float: (float)3.5 or 3.5F or 3.5f</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Object,System.Double)">
+            <summary>
+            Holds a 64-bit signed floating-point value. 
+            The smallest possible value of a double is approximately 5 times 10 to the 324th; 
+            the largest possible value is approximately 1.7 times 10 to the 308th. 
+            </summary>
+             <value>double: (double)3.5 or 3.5D or 3.5E+3</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Data.DataRow,System.String,System.Double)">
+            <summary>
+            Holds a 64-bit signed floating-point value. 
+            The smallest possible value of a double is approximately 5 times 10 to the 324th; 
+            the largest possible value is approximately 1.7 times 10 to the 308th. 
+            </summary>
+             <value>double: (double)3.5 or 3.5D or 3.5E+3</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Object,System.Decimal)">
+             <summary>
+            Holds a 128-bit signed floating-point value. 
+            Variables of type decimal are good for financial calculations. 
+            The smallest possible value of a decimal type is approximately 1 times 10 to the 28th power; 
+            the largest possible value is approximately 7.9 times 10 to the 28th power. 
+             </summary>
+             <value>decimal : (decimal)3.5 or 3.5m</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Data.DataRow,System.String,System.Decimal)">
+             <summary>
+            Holds a 128-bit signed floating-point value. 
+            Variables of type decimal are good for financial calculations. 
+            The smallest possible value of a decimal type is approximately 1 times 10 to the 28th power; 
+            the largest possible value is approximately 7.9 times 10 to the 28th power. 
+             </summary>
+             <value>decimal : (decimal)3.5 or 3.5m</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Object,System.Boolean)">
+             <summary>
+            Holds one of two possible values, true or false
+             </summary>
+             <value>int: 0</value>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBSql.TryParseValue.TryParse(System.Data.DataRow,System.String,System.Boolean)">
+             <summary>
+            Holds one of two possible values, true or false
+             </summary>
+             <value>int: 0</value>
+        </member>
+        <member name="T:JureHR.DBFunctions.DBOleDb">
+            <summary>
+            Access Database Functions
+            </summary>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBOleDb.#ctor(System.String)">
+            <summary>
+            OleDb Database Functions Constructor
+            </summary>
+            <param name="ConnectionName"></param>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBOleDb.GetConnectionString">
+            <summary>
+            Retrieves the connection string from the calling application .config file.
+            The connection string must be in an application setting called 
+            "ConnectionString".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBOleDb.DeleteRow(System.String,System.String,System.String)">
+            <summary>
+            Delete a Row from Table
+            </summary>
+            <param name="targetTable"></param>
+            <param name="idColumn"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBOleDb.ExecQuery(System.String)">
+            <summary>
+            populate data table
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBOleDb.GetDataAdapter(System.Data.OleDb.OleDbConnection,System.String)">
+            <summary>
+            used internally
+            </summary>
+            <param name="myConnection"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBOleDb.GetDataTable(System.Data.OleDb.OleDbDataAdapter)">
+            <summary>
+            used internally
+            </summary>
+            <param name="daDataAdapter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DBFunctions.DBOleDb.UpdateTable(System.Data.OleDb.OleDbDataAdapter,System.Data.DataTable)">
+            <summary>
+            updates database with data from dt
+            </summary>
+            <param name="daDataAdapter"></param>
+            <param name="myDataTable"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JureHR.DBFunctions.DBOleDb.ConnName">
+            <summary>
+            Connection Name Set in Web.Config
+            </summary>
+        </member>
+        <member name="T:JureHR.DBParameterType">
+            <summary>
+            Database ParameterType
+            </summary>
+        </member>
+        <member name="M:JureHR.DBParameterType.ToDbType(System.Type)">
+            <summary>
+            Type to Database Type
+            </summary>
+            <param name="type"></param>
+            <returns>returns DbType</returns>
+        </member>
+        <member name="M:JureHR.DBParameterType.ToManagedType(System.Data.DbType)">
+            <summary>
+            Get the native type based on the database type
+            </summary>
+            <param name="dbType">The database type to convert</param>
+            <returns>The equivalent managed type, otherwise the DBNull type</returns>
+        </member>
+        <member name="T:JureHR.SqlHelperParameterCache">
+            <summary>
+            SqlHelperParameterCache provides functions to leverage a static cache of procedure parameters, and the
+            ability to discover parameters for stored procedures at run-time.
+            </summary>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.DiscoverSpParameterSet(System.Data.SqlClient.SqlConnection,System.String,System.Boolean)">
+            <summary>
+            Resolve at run time the appropriate set of SqlParameters for a stored procedure
+            </summary>
+            <param name="connection">A valid SqlConnection object</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="includeReturnValueParameter">Whether or not to include their return value parameter</param>
+            <returns>The parameter array discovered.</returns>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.CloneParameters(System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Deep copy of cached SqlParameter array
+            </summary>
+            <param name="originalParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.CacheParameterSet(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Add parameter array to the cache
+            </summary>
+            <param name="connectionString">A valid connection string for a SqlConnection</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <param name="commandParameters">An array of SqlParamters to be cached</param>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.GetCachedParameterSet(System.String,System.String)">
+            <summary>
+            Retrieve a parameter array from the cache
+            </summary>
+            <param name="connectionString">A valid connection string for a SqlConnection</param>
+            <param name="commandText">The stored procedure name or T-SQL command</param>
+            <returns>An array of SqlParamters</returns>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.GetSpParameterSet(System.String,System.String)">
+            <summary>
+            Retrieves the set of SqlParameters appropriate for the stored procedure
+            </summary>
+            <remarks>
+            This method will query the database for this information, and then store it in a cache for future requests.
+            </remarks>
+            <param name="connectionString">A valid connection string for a SqlConnection</param>
+            <param name="spName">The name of the stored procedure</param>
+            <returns>An array of SqlParameters</returns>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.GetSpParameterSet(System.String,System.String,System.Boolean)">
+            <summary>
+            Retrieves the set of SqlParameters appropriate for the stored procedure
+            </summary>
+            <remarks>
+            This method will query the database for this information, and then store it in a cache for future requests.
+            </remarks>
+            <param name="connectionString">A valid connection string for a SqlConnection</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="includeReturnValueParameter">A bool value indicating whether the return value parameter should be included in the results</param>
+            <returns>An array of SqlParameters</returns>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.GetSpParameterSet(System.Data.SqlClient.SqlConnection,System.String)">
+            <summary>
+            Retrieves the set of SqlParameters appropriate for the stored procedure
+            </summary>
+            <remarks>
+            This method will query the database for this information, and then store it in a cache for future requests.
+            </remarks>
+            <param name="connection">A valid SqlConnection object</param>
+            <param name="spName">The name of the stored procedure</param>
+            <returns>An array of SqlParameters</returns>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.GetSpParameterSet(System.Data.SqlClient.SqlConnection,System.String,System.Boolean)">
+            <summary>
+            Retrieves the set of SqlParameters appropriate for the stored procedure
+            </summary>
+            <remarks>
+            This method will query the database for this information, and then store it in a cache for future requests.
+            </remarks>
+            <param name="connection">A valid SqlConnection object</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="includeReturnValueParameter">A bool value indicating whether the return value parameter should be included in the results</param>
+            <returns>An array of SqlParameters</returns>
+        </member>
+        <member name="M:JureHR.SqlHelperParameterCache.GetSpParameterSetInternal(System.Data.SqlClient.SqlConnection,System.String,System.Boolean)">
+            <summary>
+            Retrieves the set of SqlParameters appropriate for the stored procedure
+            </summary>
+            <param name="connection">A valid SqlConnection object</param>
+            <param name="spName">The name of the stored procedure</param>
+            <param name="includeReturnValueParameter">A bool value indicating whether the return value parameter should be included in the results</param>
+            <returns>An array of SqlParameters</returns>
+        </member>
+        <member name="T:JureHR.ApplicationLog">
+            <summary>
+                Logging class to provide tracing and logging support. 
+                <remarks>
+                    There are four different logging levels (error, warning, info, trace) 
+                    that produce output to either the system event log or a tracing 
+                    file as specified in the current ApplicationConfiguration settings.
+                </remarks>
+            </summary>
+        </member>
+        <member name="M:JureHR.ApplicationLog.WriteError(System.String,System.Object)">
+            <summary>
+                Write at the Error level to the event log and/or tracing file.
+                <param name="source">The source of error in event log.</param>
+                <param name="message">The text to write to the log file or event log.</param>
+            </summary>
+        </member>
+        <member name="M:JureHR.ApplicationLog.WriteWarning(System.String,System.Object)">
+            <summary>
+                Write at the Warning level to the event log and/or tracing file.
+                <param name="source">The source of error in event log.</param>
+                <param name="message">The text to write to the log file or event log.</param>
+            </summary>
+        </member>
+        <member name="M:JureHR.ApplicationLog.WriteInfo(System.String,System.Object)">
+            <summary>
+                Write at the Info level to the event log and/or tracing file.
+                <param name="source">The source of error in event log.</param>
+                <param name="message">The text to write to the log file or event log.</param>
+            </summary>
+        </member>
+        <member name="M:JureHR.ApplicationLog.WriteTrace(System.String,System.Object)">
+            <summary>
+                Write at the Verbose level to the event log and/or tracing file.
+                <param name="source">The source of error in event log.</param>
+                <param name="message">The text to write to the log file or event log.</param>
+            </summary>
+        </member>
+        <member name="M:JureHR.ApplicationLog.WriteLog(System.String,System.Diagnostics.TraceLevel,System.Object)">
+            <summary>
+                Determine where a string needs to be written based on the
+                configuration settings and the error level.
+                <param name="source">The source of error in event log.</param>
+                <param name="level">The severity of the information to be logged.</param>
+                <param name="message">The string to be logged.</param>
+            </summary>
+        </member>
+        <member name="M:JureHR.ApplicationLog.ExceptionToText(System.Exception)">
+            <summary>
+            Exception Info
+            </summary>
+            <param name="exc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ApplicationLog.GetStackTrace">
+            <summary>
+            Gets information about origin of error
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ApplicationLog.AditionalInfo">
+            <summary>
+            User and server information
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.ApplicationLog.GetLogName">
+            <summary>
+            Get name from web.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.DataConversions">
+            <summary>
+            Data class for data manipulation
+            </summary>
+        </member>
+        <member name="M:JureHR.DataConversions.GetTopDataViewRows(System.Data.DataView,System.Int32)">
+            <summary>
+            Get Top DataView Rows
+            </summary>
+            <param name="dv"></param>
+            <param name="n"></param>
+            <returns>Returns only top specified number of DataView rows</returns>
+        </member>
+        <member name="M:JureHR.DataConversions.DataTableFromXML(System.String)">
+            <summary>
+            DataTable from XML
+            </summary>
+            <param name="FilePath"></param>
+            <returns>Converts XML document in DataTable</returns>
+        </member>
+        <member name="M:JureHR.DataConversions.GetXmlFileAsString(System.String)">
+            <summary>
+            Get's Xml file as formatted text.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DataConversions.ByteArrayToObject(System.Byte[])">
+            <summary>
+            Function to get object from byte array
+            </summary>
+            <param name="ByteArray">byte array to get object</param>
+            <returns>object</returns>
+        </member>
+        <member name="M:JureHR.DataConversions.ObjectToByteArray(System.Object)">
+            <summary>
+            Function to get byte array from a object
+            </summary>
+            <param name="Object">object to get byte array</param>
+            <returns>Byte Array</returns>
+        </member>
+        <member name="M:JureHR.DataConversions.DataTableToCsvFile(System.String,System.Data.DataTable,System.String[])">
+            <summary>
+            Creates a CSV file
+            </summary>
+            <param name="AbsolutePathAndFileName"></param>
+            <param name="TheDataTable"></param>
+            <param name="Options">[0] = separator, e.g. ";" (default = ",")</param>
+        </member>
+        <member name="M:JureHR.DataConversions.CsvToDataTable(System.String,System.Boolean,System.Char[])">
+            <summary>
+            csv To DataTable
+            </summary>
+            <param name="file">Path to the file</param>
+            <param name="isRowOneHeader">Is Row One Header</param>
+            <param name="Options">CHAR [0] = separator, e.g. ';' (default = ',')</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:JureHR.DataConversions.CsvToDataTable(System.String)">
+            <summary>
+            csv To DataTable only when is separated by coma
+            </summary>
+            <param name="path">Path of the file</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:JureHR.DataConversions.ListToDataTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Two dimensional List To Data Table
+            </summary>
+            <typeparam name="T">Object Name</typeparam>
+            <param name="items">List of objects</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.DataConversions.HashtableToDictionary``2(System.Collections.Hashtable)">
+            <summary>
+            Convert Hashtable to Dictionary
+            </summary>
+            <typeparam name="K"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.EncryptUtility">
+            <summary>
+            Class Encrypt Utility for Data Encryption
+            </summary>
+        </member>
+        <member name="M:JureHR.EncryptUtility.GeneratePassPhrase">
+            <summary>
+            Generate Password Phrase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.GenerateSalt">
+            <summary>
+            Generate Salt consists of random bits
+            </summary>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.GenerateInitializationVector(System.Security.Cryptography.SymmetricAlgorithm)">
+            <summary>
+            Generate Initialization vector
+            </summary>
+            <param name="algorithm"></param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.AlgorithmValue(JureHR.EncryptUtility.Algorithm)">
+            <summary>
+            Chose what type of Encryption are you using
+            </summary>
+            <param name="Algorithm">Creates SymmetricAlgorithm</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptMD5(System.String)">
+            <summary>
+            Encrypt string using MD5. There is no decryption.
+            </summary>
+            <param name="data">String to decrypt</param>
+            <returns>Encrypted string</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptRSA(System.String)">
+            <summary>
+            Encrypt string using MD5 using SHA1.
+            </summary>
+            <param name="plainText">String to decrypt</param>
+            <returns>Encrypted string</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.LoadKey(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+             <summary>
+             Load RSA Key
+             
+             Key generation  
+            
+            1) Choose two large random prime numbers P and Q of similar length.  
+            
+            2) Compute N = P x Q. N is the modulus for both the Public and Private keys.
+            
+            3) PSI = (P-1)(Q-1) , PSI is also called the Euler's totient function. 
+            
+            4) Choose an integer E, such that 1 less than E less than PSI, making sure that E and PSI are co-prime.  E is the Public key exponent.
+            
+            5) Calculate D = E-1 ( mod PSI ) , normally using Extended Euclidean algorithm. D is the Private key exponent. 
+             </summary>
+             <param name="D">privateExponent : This one's easy -- it contains d, the private exponent</param>
+             <param name="DP">exponent1 : d mod (p - 1)</param>
+             <param name="DQ">exponent2 : d mod (q - 1)</param>
+             <param name="Exponent">publicExponent : e, the public exponent</param>
+             <param name="InverseQ">coefficient : (InverseQ)(q) = 1 mod p</param>
+             <param name="Modulus">modulus : n</param>
+             <param name="P">prime1 : Also self-explantory, p</param>
+             <param name="Q">prime2 : q</param>
+             <returns></returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecryptRSA(System.String)">
+            <summary>
+            Decrypt string using MD5 using SHA1.
+            </summary>
+            <param name="cipherText">String to encryp</param>
+            <returns>Decrypted string</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptFile(JureHR.EncryptUtility.Algorithm,System.String)">
+            <summary>
+            Encrypt File using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="filePath">Path of the file</param>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptFile(JureHR.EncryptUtility.Algorithm,System.String,System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Encrypt File using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="filePath">Path of the file</param>
+            <param name="PassPhrase">Byte Password Phrase</param>
+            <param name="SaltValue">Byte Salt Value</param>
+            <param name="InitVector">Byte Initialization Vector</param>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptText(JureHR.EncryptUtility.Algorithm,System.String)">
+            <summary>
+            Encrypt Text using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="text">String to Encrypt</param>
+            <returns>Encrypted String</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptText(JureHR.EncryptUtility.Algorithm,System.String,System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Encrypt Text using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="text">String to Encrypt</param>
+            <param name="PassPhrase">Byte Password Phrase</param>
+            <param name="SaltValue">Byte Salt Value</param>
+            <param name="InitVector">Byte Initialization Vector</param>
+            <returns>Encrypted String</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptBytes(JureHR.EncryptUtility.Algorithm,System.Byte[])">
+            <summary>
+            Encrypt Bytes using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="encryptedData">Bytes to Encrypt</param>
+            <returns>Encrypted Bytes</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncryptBytes(JureHR.EncryptUtility.Algorithm,System.Byte[],System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Encrypt Text using any SymmetricAlgorithm encription
+            </summary>
+            <param name="_algorithm">Algorithm enum</param>
+            <param name="data">String to Encrypt</param>
+            <param name="PassPhrase">Byte Password Phrase</param>
+            <param name="SaltValue">Byte Salt Value</param>
+            <param name="InitVector">Byte Initialization Vector</param>
+            <returns>Encrypted String</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecryptFile(JureHR.EncryptUtility.Algorithm,System.String)">
+            <summary>
+            Decrypt File using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="filePath">Path of the file</param>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecryptFile(JureHR.EncryptUtility.Algorithm,System.String,System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Decrypt File using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="filePath">Path of the file</param>
+            <param name="PassPhrase">Byte Password Phrase</param>
+            <param name="SaltValue">Byte Salt Value</param>
+            <param name="InitVector">Byte Initialization Vector</param>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecryptText(JureHR.EncryptUtility.Algorithm,System.String)">
+            <summary>
+            Decrypt Text using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="encryptedText">String to Encrypt</param>
+            <returns>Decrypted String</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecryptText(JureHR.EncryptUtility.Algorithm,System.String,System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Decrypt Text using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="encryptedText">String to Encrypt</param>
+            <param name="PassPhrase">Byte Password Phrase</param>
+            <param name="SaltValue">Byte Salt Value</param>
+            <param name="InitVector">Byte Initialization Vector</param>
+            <returns>Decrypted String</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecryptBytes(JureHR.EncryptUtility.Algorithm,System.Byte[])">
+            <summary>
+            Decrypt Bytes using any SymmetricAlgorithm encription
+            </summary>
+            <param name="algorithm">Algorithm enum</param>
+            <param name="encryptedData">Bytes to Encrypt</param>
+            <returns>Decrypted Bytes</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecryptBytes(JureHR.EncryptUtility.Algorithm,System.Byte[],System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Decrypt Text using any SymmetricAlgorithm encription
+            </summary>
+            <param name="_algorithm">Algorithm enum</param>
+            <param name="encryptedData">String to Encrypt</param>
+            <param name="PassPhrase">Byte Password Phrase</param>
+            <param name="SaltValue">Byte Salt Value</param>
+            <param name="InitVector">Byte Initialization Vector</param>
+            <returns>Decrypt String</returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.ConvertToBase64(System.Byte[])">
+            <summary>
+            Convert byte array to base64 string
+            </summary>
+            <param name="inputBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.ConvertFromBase64(System.String)">
+            <summary>
+            Convert base64 string to byte array
+            </summary>
+            <param name="inputCharacters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.FileConvertToBase64(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.EncryptUtility.Base64ConvertToFile(System.String,System.String)">
+            <summary>
+            Convert from Base64 to File
+            </summary>
+            <param name="inputBase64Char"></param>
+            <param name="outputFileName"></param>
+        </member>
+        <member name="M:JureHR.EncryptUtility.DecodeFromFileBase64(System.String,System.String)">
+            <summary>
+            Decode base64 from file
+            </summary>
+            <param name="inFileName"></param>
+            <param name="outFileName"></param>
+        </member>
+        <member name="M:JureHR.EncryptUtility.EncodeFromFileBase64(System.String,System.String)">
+            <summary>
+            Encode base64 from file
+            </summary>
+            <param name="inFileName"></param>
+            <param name="outFileName"></param>
+        </member>
+        <member name="P:JureHR.EncryptUtility.PassPhrase">
+            <summary>
+            Password Phrase
+            </summary>
+        </member>
+        <member name="P:JureHR.EncryptUtility.SaltValue">
+            <summary>
+            Salt consists of random bits
+            </summary>
+        </member>
+        <member name="P:JureHR.EncryptUtility.InitVector">
+            <summary>
+            Initialization vector
+            </summary>
+        </member>
+        <member name="P:JureHR.EncryptUtility.KeySize">
+            <summary>
+            KeySize
+            </summary>
+        </member>
+        <member name="P:JureHR.EncryptUtility.PasswordIterations">
+            <summary>
+            Password Iterations
+            </summary>
+        </member>
+        <member name="T:JureHR.EncryptUtility.Algorithm">
+            <summary>
+            Enum Algorithm Types
+            </summary>
+        </member>
+        <member name="F:JureHR.EncryptUtility.Algorithm.AES">
+            <summary>
+            Advanced Encryption Standard
+            </summary>
+        </member>
+        <member name="F:JureHR.EncryptUtility.Algorithm.DES">
+            <summary>
+            Data Encryption Standard
+            </summary>
+        </member>
+        <member name="F:JureHR.EncryptUtility.Algorithm.RC2">
+            <summary>
+            (also known as ARC2) is a block cipher designed by Ron Rivest 
+            </summary>
+        </member>
+        <member name="F:JureHR.EncryptUtility.Algorithm.RIJNDAEL">
+            <summary>
+            Rijndael symmetric encryption algorithm 
+            </summary>
+        </member>
+        <member name="F:JureHR.EncryptUtility.Algorithm.TRIPLE_DES">
+            <summary>
+            Triple Data Encryption Algorithm
+            </summary>
+        </member>
+        <member name="T:JureHR.CanadaTax">
+            <summary>
+            Canada specifific calculations for Tax and postalcode checking
+            </summary>
+        </member>
+        <member name="M:JureHR.CanadaTax.TaxPercentagesByPostalCode(System.String,System.String@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Tax Percentages By PostalCode
+            </summary>
+            <param name="PostalCode">Canadian Postal Code</param>
+            <param name="ProvinceCode">out Province Code</param>
+            <param name="TaxPercentage_GST">out GST Percentage</param>
+            <param name="TaxPercentage_PST">out PST Percentage</param>
+            <param name="TaxPercentage_HST">out HST Percentage</param>
+        </member>
+        <member name="M:JureHR.CanadaTax.TaxCalculatorByPostalCode(System.String,System.Double,System.String@,System.Double@,System.Double@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Tax Calculator By PostalCode
+            </summary>
+            <param name="PostalCode">Canadian Postal Code</param>
+            <param name="TaxableAmount"></param>
+            <param name="ProvinceCode">out Province Code</param>
+            <param name="TaxedAmount_GST">out GST Amount</param>
+            <param name="TaxedAmount_PST">out PST Amount</param>
+            <param name="TaxedAmount_HST">out HST Amount</param>
+            <param name="TaxedAmount_Total">out Total Tax Amount</param>
+            <param name="TaxPercentage_Effective">out Effective</param>
+        </member>
+        <member name="M:JureHR.CanadaTax.TaxCalculatorByProvince(System.String,System.Double,System.Double@,System.Double@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Tax Calculator By Province
+            </summary>
+            <param name="ProvinceCode">Province Code</param>
+            <param name="TaxableAmount"></param>
+            <param name="TaxedAmount_GST">out GST Amount</param>
+            <param name="TaxedAmount_PST">out PST Amount</param>
+            <param name="TaxedAmount_HST">out HST Amount</param>
+            <param name="TaxedAmount_Total">out Total Tax Amount</param>
+            <param name="TaxPercentage_Effective">out Effective</param>
+        </member>
+        <member name="M:JureHR.CanadaTax.TaxPercentagesByProvince(System.String,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Tax Percentages By Province
+            </summary>
+            <param name="ProvinceCode">Province Code</param>
+            <param name="TaxPercentage_GST">out GST Percentage</param>
+            <param name="TaxPercentage_PST">out PST Percentage</param>
+            <param name="TaxPercentage_HST">out HST Percentage</param>
+        </member>
+        <member name="M:JureHR.CanadaTax.FixStringToDouble(System.String)">
+            <summary>
+            Fix String To Double
+            </summary>
+            <param name="Currency_String"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.GeoData">
+            <summary>
+            This class provides countries, states and teritories
+            </summary>
+        </member>
+        <member name="F:JureHR.GeoData.Countries">
+            <summary>
+            all countries in list
+            </summary>
+        </member>
+        <member name="M:JureHR.GeoData.GetStatesOrTeritories(System.String)">
+            <summary>
+            get states or teritories based on country
+            </summary>
+            <param name="country"><example>GeoData.GetStates("Canada");</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.GeoData.ProvinceByPostalCode(System.String,System.String@,System.String@)">
+            <summary>
+            Province By PostalCode
+            </summary>
+            <param name="PostalCode"></param>
+            <param name="CountryCode"></param>
+            <param name="ProvinceCode"></param>
+        </member>
+        <member name="M:JureHR.GeoData.StateNamesAndCodes(System.String)">
+            <summary>
+            Returns state nemes when code provided or code when name is provided
+            <example>
+                string code = GeoData.StateNamesAndCodes("California");
+                string name = GeoData.StateNamesAndCodes("CA");
+            </example>
+            </summary>
+            <param name="abbr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.GeoData.ProvinceNamesAndCodes(System.String)">
+            <summary>
+            Returns province nemes when code provided or code when name is provided
+            <example>
+                string code = GeoData.ProvinceNamesAndCodes("Ontario");
+                string name = GeoData.ProvinceNamesAndCodes("ON");
+            </example>
+            </summary>
+            <param name="abbr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.GeoData.GetDistanceBetweenPoints(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Get Distance Between Two Geo Points
+            </summary>
+            <param name="lat1"></param>
+            <param name="long1"></param>
+            <param name="lat2"></param>
+            <param name="long2"></param>
+            <returns>Distance in m</returns>
+        </member>
+        <member name="T:JureHR.Mailer">
+            <summary>
+            mailHelper is a helper class that takes the System.Net.Mail library
+            and provides a simple library for anyone to use.
+            </summary>
+        </member>
+        <member name="M:JureHR.Mailer.#ctor">
+            <summary>
+            Mailer Constructor
+            </summary>
+        </member>
+        <member name="M:JureHR.Mailer.#ctor(System.String)">
+            <summary>
+            Mailer Constructor With Server Name
+            </summary>
+            <param name="serverName">Set Diferrent Server Name from Web.Config</param>
+        </member>
+        <member name="M:JureHR.Mailer.#ctor(System.String,System.Int32)">
+            <summary>
+            Mailer Constructor With Server Name And Port Number
+            </summary>
+            <param name="serverName">Set Diferrent Server Name from Web.Config</param>
+            <param name="port">Set Diferrent Port Number from Web.Config</param>
+        </member>
+        <member name="M:JureHR.Mailer.#ctor(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Mailer Constructor With Server Name, Port Number And Authentication
+            </summary>
+            <param name="serverName">Set Diferrent Server Name from Web.Config</param>
+            <param name="port">Set Diferrent Port Number from Web.Config</param>
+            <param name="authName">Set Diferrent UserName from Web.Config</param>
+            <param name="authPassword">Set Diferrent Password from Web.Config</param>
+        </member>
+        <member name="F:JureHR.Mailer.mailStatus">
+            <summary>
+            The status of the mail being sent using the async method
+            </summary>
+        </member>
+        <member name="M:JureHR.Mailer.GetSystemMailSettings">
+            <summary>
+            system.net/mailSettings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Mailer.OnNotifyCaller">
+            <summary>
+            Notifies the calling application about the status of the email being sent
+            </summary>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean)">
+            <summary>
+            Using the assigned properties generates an email message object
+            and sends it using the assigned smtp server.  To use this method
+            use createMailObjects, set the properties for the email information
+            and use the AddToAddress, AddCCAddress, AddBCCAddress, AddAttachments 
+            and AuthenticateToServer methods to finish the setup of the mail objects
+            </summary>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+            <param name="filePath">The path to the attachment</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.Boolean,System.Net.Mail.Attachment,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+            <param name="attachData">An attachment created from a file resource</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="cc">The addess the email is being copied to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="cc">The addess the email is being copied to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+            <param name="filePath">The path to the attachment</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Net.Mail.Attachment,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="cc">The addess the email is being copied to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+            <param name="attachData">An attachment created from a file resource</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="cc">The addess the email is being copied to</param>
+            <param name="bcc">The addess the email is being blind copied to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="cc">The addess the email is being copied to</param>
+            <param name="bcc">The addess the email is being blind copied to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+            <param name="filePath">The path to the attachment</param>
+        </member>
+        <member name="M:JureHR.Mailer.SendEmail(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Net.Mail.Attachment,System.Boolean)">
+            <summary>
+            Generates an email and sends it, requires no additional properties to be set
+            prior to this call
+            </summary>
+            <param name="asyncEmail">Used it you want a response from the SMTP server</param>
+            <param name="from">The address the email is from</param>
+            <param name="to">The address the email is to</param>
+            <param name="cc">The addess the email is being copied to</param>
+            <param name="bcc">The addess the email is being blind copied to</param>
+            <param name="subject">The subject of the email</param>
+            <param name="body">The body of the email</param>
+            <param name="htmlEmail">Is this an html based email</param>
+            <param name="separate">Messages are sending per email separetly</param>
+            <param name="attachData">An attachment created from a file resource</param>
+        </member>
+        <member name="M:JureHR.Mailer.CreateMailObjects">
+            <summary>
+            Creates the base mail objects needed to generate an SMTP based email
+            </summary>
+        </member>
+        <member name="M:JureHR.Mailer.AuthenticateToServer">
+            <summary>
+            Creates authentication credentials that are passed to the mail client
+            to access the SMTP server
+            </summary>
+        </member>
+        <member name="M:JureHR.Mailer.AddAttachments(System.String)">
+            <summary>
+            Creates an attachment and adds it to the mail message
+            </summary>
+            <param name="path">The path to the attachment</param>
+        </member>
+        <member name="M:JureHR.Mailer.AddAttachments(System.Net.Mail.Attachment)">
+            <summary>
+            Adds an attachment to the mail message
+            </summary>
+            <param name="attachData">An attachment object</param>
+        </member>
+        <member name="M:JureHR.Mailer.AddToAddress(System.String)">
+            <summary>
+            Used to add a to address to the To Address collection
+            </summary>
+            <param name="toAddress">The email address to add</param>
+        </member>
+        <member name="M:JureHR.Mailer.AddCCAddress(System.String)">
+            <summary>
+            Used to add a cc address to the CC Address collection
+            </summary>
+            <param name="ccAddress">The email address to add</param>
+        </member>
+        <member name="M:JureHR.Mailer.AddBCCAddress(System.String)">
+            <summary>
+            Used to add a bcc address to the Bcc Address collection
+            </summary>
+            <param name="bccAddress">The email address to add</param>
+        </member>
+        <member name="M:JureHR.Mailer.ErrNotify(System.Object,System.String)">
+            <summary>
+            ErrNotify sends Email message with all avalible user information and error message
+            </summary>
+            <param name="ex"></param>
+            <param name="subject"></param>
+        </member>
+        <member name="P:JureHR.Mailer.ServerName">
+            <summary>
+            Set Server Name
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.Port">
+            <summary>
+            Set Port
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.AuthName">
+            <summary>
+            Set User Name
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.AuthPassword">
+            <summary>
+            Set Password
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.MailClient">
+            <summary>
+            Gets the SmtpClient
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.Message">
+            <summary>
+            Gets the MailMessage
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.MailFromAddress">
+            <summary>
+            Gets the from MailAddress
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.FromAddress">
+            <summary>
+            Gets or Sets the address the email is from
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.Subject">
+            <summary>
+            Gets or Sets the subject of the email
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.Body">
+            <summary>
+            Gets or Sets the body of the email
+            </summary>
+        </member>
+        <member name="P:JureHR.Mailer.IsHtmlEmail">
+            <summary>
+            Gets or Sets if this is a html email.  True for html false for text
+            </summary>
+        </member>
+        <member name="E:JureHR.Mailer.notifyCaller">
+            <summary>
+            Notifies the calling application of the email status
+            </summary>
+        </member>
+        <member name="T:JureHR.Network">
+            <summary>
+            Class Network
+            </summary>
+        </member>
+        <member name="M:JureHR.Network.GetHostbyIP(System.String)">
+            <summary>
+            Get Host name by IP
+            </summary>
+            <param name="IPAdress"></param>
+            <returns>Host name</returns>
+        </member>
+        <member name="M:JureHR.Network.GetHttpSource(System.String)">
+            <summary>
+            returns HTTP source to a string
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.IsAlive(System.String)">
+            <summary>
+            check if host is alive
+            </summary>
+            <param name="svr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.IsAlive(System.String,System.Int32)">
+            <summary>
+            check TCP Port
+            </summary>
+            <param name="ipAddress"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.KillHost(System.String)">
+            <summary>
+            shutdown host
+            </summary>
+            <param name="svr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.KillHost(System.String,System.String,System.String)">
+            <summary>
+            shutdown host using password
+            </summary>
+            <param name="svr"></param>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.MapDrive(System.Char,System.String)">
+            <summary>
+            map network drive
+            </summary>
+            <param name="letter"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.GetDnsServerName">
+            <summary>
+            Get Dns Server Name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.GetDnsAdress">
+            <summary>
+            loop over them to find one which has an OperationalStatus of Up, then get the IPInterfaceProperties of the active NetworkInterface, then get the DNS Addresses from the IPInterfaceProperties and then return the first value.
+            </summary>
+            <returns>ip adderss</returns>
+        </member>
+        <member name="M:JureHR.Network.UserIPAddress">
+            <summary>
+            Get user IP Address
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Network.GetUrls(System.String)">
+            <summary>
+            get the all the Urls from an XML Sitemap using XPath. 
+            </summary>
+            <param name="url"></param>
+            <returns>list of avalible url's</returns>
+        </member>
+        <member name="M:JureHR.Network.HttpInfoGET">
+            <summary>
+            Get All Posible Http Info
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.XMLDoc">
+            <summary>
+            Manipulation of XML Document
+            </summary>
+        </member>
+        <member name="M:JureHR.XMLDoc.ToString(System.Xml.XmlDocument)">
+            <summary>
+            XmlDocument To String
+            </summary>
+            <param name="xmlDoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.XMLDoc.SignXmlDocument(System.Security.Cryptography.RSA,System.Xml.XmlDocument)">
+            <summary>
+            XML digital signatures (XMLDSIG) allow you to verify that data was not altered after it was signed
+            </summary>
+            <param name="key"></param>
+            <param name="doc"></param>
+        </member>
+        <member name="M:JureHR.XMLDoc.VerifyXmlDocument(System.Security.Cryptography.RSA,System.Xml.XmlDocument)">
+            <summary>
+            The key can then be retrieved to verify the XML digital signature
+            </summary>
+            <param name="key"></param>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.XMLDoc.XmlElement">
+            <summary>
+            Adding Element and Attribute to XMLDocument
+            </summary>
+        </member>
+        <member name="M:JureHR.XMLDoc.XmlElement.AddXmlElement(System.Xml.XmlDocument,System.Xml.XmlElement@,System.String,System.Object)">
+            <summary>
+            Adding Element to XMLDocument
+            </summary>
+            <param name="xmldoc"></param>
+            <param name="XmlElement"></param>
+            <param name="Name"></param>
+            <param name="Content"></param>
+        </member>
+        <member name="M:JureHR.XMLDoc.XmlElement.AddXmlAttribute(System.Xml.XmlDocument,System.Xml.XmlElement@,System.String,System.Object)">
+            <summary>
+            Adding Attribute to XMLDocument
+            </summary>
+            <param name="xmldoc"></param>
+            <param name="XmlElement"></param>
+            <param name="Name"></param>
+            <param name="Content"></param>
+        </member>
+        <member name="T:JureHR.XMLDoc.XmlNode">
+            <summary>
+            XmlNode manipulation
+            </summary>
+        </member>
+        <member name="M:JureHR.XMLDoc.XmlNode.TryToRead(System.Xml.XmlNode,System.String)">
+            <summary>
+            Try To read XMLNode
+            </summary>
+            <param name="node"></param>
+            <param name="nodeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.XMLDoc.XmlNode.AssignNodeValue(System.Xml.XmlNode@,System.String)">
+            <summary>
+            Set the value of the XMLNode
+            </summary>
+            <param name="n"></param>
+            <param name="Value"></param>
+        </member>
+        <member name="T:JureHR.XMLDoc.XSLT">
+            <summary>
+            Converting XSLT to HTML and Back
+            </summary>
+        </member>
+        <member name="M:JureHR.XMLDoc.XSLT.XmlXsltToHtml(System.Xml.XmlDocument,System.String,System.Xml.Xsl.XsltArgumentList,System.String@)">
+            <summary>
+            Converting XmlXslt file to Html
+            </summary>
+            <param name="xdoc"></param>
+            <param name="xslFilePath"></param>
+            <param name="XsltArgumentList"></param>
+            <param name="outputString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.XMLDoc.XSLT.XmlXsltToHtml(System.Xml.XmlDocument,System.Xml.XmlReader,System.Xml.Xsl.XsltArgumentList,System.String@)">
+            <summary>
+            Converting XmlXslt from XMLReader to Html
+            </summary>
+            <param name="xdoc"></param>
+            <param name="XmlReader"></param>
+            <param name="XsltArgumentList"></param>
+            <param name="outputString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.XMLDoc.Serialization">
+            <summary>
+            XML Serialization
+            </summary>
+        </member>
+        <member name="M:JureHR.XMLDoc.Serialization.ObjectToXmlDocument(System.Object)">
+            <summary>
+            Object To XmlDocument
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.XMLDoc.Serialization.XmlDocumentToObject(System.Type,System.String)">
+            <summary>
+            XmlDocument To Object
+            </summary>
+            <param name="objType"></param>
+            <param name="stringXmlDoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.XMLDoc.Serialization.DataTableAddToXmlRoot(System.Xml.XmlDocument,System.Xml.XmlElement@,System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataTable AddTo XmlRoot
+            </summary>
+            <param name="XmlDoc"></param>
+            <param name="XmlElement_Root"></param>
+            <param name="_DataTable"></param>
+            <param name="TableName"></param>
+            <param name="RowName"></param>
+        </member>
+        <member name="M:JureHR.XMLDoc.Serialization.DataTableToXmlDocument(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataTable To XmlDocument
+            </summary>
+            <param name="_DataTable"></param>
+            <param name="TableName"></param>
+            <param name="RowName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.XMLDoc.Serialization.DataSetToXmlDocument(System.Data.DataSet)">
+            <summary>
+            DataSet To XmlDocument
+            </summary>
+            <param name="_DataSet"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.CacheHelper">
+            <summary>
+            Cache Management
+            </summary>
+        </member>
+        <member name="F:JureHR.CacheHelper.DayFactor">
+            <summary>
+            Day cache factor
+            </summary>
+        </member>
+        <member name="F:JureHR.CacheHelper.HourFactor">
+            <summary>
+            Hours cache factor
+            </summary>
+        </member>
+        <member name="F:JureHR.CacheHelper.MinuteFactor">
+            <summary>
+            Sub-cache factor
+            </summary>
+        </member>
+        <member name="F:JureHR.CacheHelper.SecondFactor">
+            <summary>
+            Seconds cache factor
+            </summary>
+        </member>
+        <member name="M:JureHR.CacheHelper.ReSetFactor(System.Int32)">
+            <summary>
+            Reset
+            </summary>
+            <param name="cacheFactor"></param>
+        </member>
+        <member name="M:JureHR.CacheHelper.#cctor">
+            <summary>
+            Static initializer should ensure we only have to look up the current cache
+            instance once.        
+            </summary>
+        </member>
+        <member name="M:JureHR.CacheHelper.Clear">
+            <summary>
+            Static initializer should ensure we only have to look up the current cache
+            </summary>
+        </member>
+        <member name="M:JureHR.CacheHelper.RemoveByPattern(System.String)">
+            <summary>
+            Remove items whose key can match the given regular expression pattern string 
+            </summary>
+            <param name="pattern">mode</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.RemoveBySubKey(System.String)">
+            <summary>
+            Remove items whose key contains the given sub keyword string.
+            </summary>
+            <param name="subKeyWord"></param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Remove(System.String)">
+            <summary>
+            Remove items whose key can match the given regular expression pattern string 
+            </summary>
+            <param name="key">key</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Insert(System.String,System.Object)">
+            <summary>
+            Object is loaded into the Cache
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object </param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Insert(System.String,System.Object,System.Web.Caching.CacheDependency)">
+            <summary>
+            Object is loaded into the Cache, additional cache dependency information
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+            <param name="dep">cache dependencies</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Insert(System.String,System.Object,System.Int32)">
+            <summary>
+            Object is loaded into the Cache, additional expiration time information
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+            <param name="seconds">cache time (in seconds)</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Insert(System.String,System.Object,System.Int32,System.Web.Caching.CacheItemPriority)">
+            <summary>
+            Object is loaded into the Cache, additional expiration time information and priority
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+            <param name="seconds">cache time (in seconds)</param>
+            <param name="priority"> priority</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.Int32)">
+            <summary>
+            Object is loaded into the Cache, additional cache dependency and expiration time (the number of seconds after expired)
+            (Default priority is Normal)
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+            <param name="dep">cache dependencies</param>
+            <param name="seconds">cache time (in seconds)</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.Int32,System.Web.Caching.CacheItemPriority)">
+            <summary>
+            Object is loaded into the Cache, additional cache dependency and expiration time expires (after how many seconds) and priority
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+            <param name="dep">cache dependencies</param>
+            <param name="seconds">cache time (in seconds)</param>
+            <param name="priority">priority</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.MicroInsert(System.String,System.Object,System.Int32)">
+            <summary>
+            Object to the cache and ignore the priority
+            </summary>
+            <param Name="key"> key </param>
+            <param Name="obj"> object </param>
+            <param Name="second"> time </param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Max(System.String,System.Object)">
+            <summary>
+            Object to the cache and the expiration time is set to the maximum
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Max(System.String,System.Object,System.Web.Caching.CacheDependency)">
+            <summary>
+            Object to the cache and the expiration time is set to the maximum, the additional cache dependency information
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+            <param name="dep">cache dependencies</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Permanent(System.String,System.Object)">
+            <summary>
+            Insert a persistent cache
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Permanent(System.String,System.Object,System.Web.Caching.CacheDependency)">
+            <summary>
+            Insert persistent cache, additional cache dependency
+            </summary>
+            <param name="key">key</param>
+            <param name="obj">object</param>
+            <param name="dep">cache dependencies</param>
+        </member>
+        <member name="M:JureHR.CacheHelper.Get(System.String)">
+            <summary>
+            Button to get the cached object
+            </summary>
+            <param name="key">key</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.CacheHelper.GetAllKeyValues">
+            <summary>
+            GetAllKeyValues
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.CacheHelper.GetAllKeys">
+            <summary>
+            GetAllKeys
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.CacheHelper.SecondFactorCalculate(System.Int32)">
+            <summary>
+            Return int of seconds * SecondFactor
+            </summary>
+        </member>
+        <member name="T:JureHR.Useful">
+            <summary>
+            Class Of Useful Functions
+            </summary>
+        </member>
+        <member name="M:JureHR.Useful.EncodeTo64(System.String)">
+            <summary>
+            Encode To 64
+            </summary>
+            <param name="toEncode"></param>
+            <returns>clean string</returns>
+        </member>
+        <member name="M:JureHR.Useful.DecodeFrom64(System.String)">
+            <summary>
+            Decode From 64
+            </summary>
+            <param name="encodedData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.Parse_md(System.String)">
+            <summary>
+            Hashtable Parse from string
+            </summary>
+            <param name="md"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.ConvertArrayToNVC(System.String[0:,0:])">
+            <summary>
+            Convert Array To NVC(Name Value Collection)
+            </summary>
+            <param name="array"></param>
+            <returns>returns NameValueCollection</returns>
+        </member>
+        <member name="M:JureHR.Useful.GetLastNDays(System.Int32)">
+            <summary>
+            Get Last N Days
+            </summary>
+            <param name="numberOfDays"></param>
+            <returns>DateTime[]</returns>
+        </member>
+        <member name="M:JureHR.Useful.ReWritePhoneNumber(System.String)">
+            <summary>
+            ReWrite Phone Number in Form (123) 456 - 7890
+            </summary>
+            <param name="PhoneNumber">Phone Number</param>
+            <returns>Phone Number in Form (123) 456 - 7890</returns>
+        </member>
+        <member name="T:JureHR.Useful.Conversions">
+            <summary>
+            Class Conversions, Time, Temperature, Size
+            </summary>
+        </member>
+        <member name="M:JureHR.Useful.Conversions.DateTimeToOracle(System.DateTime)">
+            <summary>
+             Date Time To Oracle
+            </summary>
+            <param name="dt"></param>
+            <returns>Formates DateTime to Oracle format</returns>
+        </member>
+        <member name="M:JureHR.Useful.Conversions.DateToStr(System.DateTime)">
+            <summary>
+             Date Time To String
+            <para>DateTime to string value</para>
+            </summary>
+            <param name="dt"></param>
+            <returns>String value</returns>
+        </member>
+        <member name="M:JureHR.Useful.Conversions.OracleDateToStr(System.String)">
+            <summary>
+            Oracle Date To Str
+            <para>Convert Oracle to date string</para>
+            </summary>
+            <param name="str"></param>
+            <returns>Date string</returns>
+        </member>
+        <member name="M:JureHR.Useful.Conversions.CelsiusToFahrenheit(System.String)">
+            <summary>
+            Celsius To Fahrenheit
+            </summary>
+            <param name="temperatureCelsius"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.Conversions.FahrenheitToCelsius(System.String)">
+            <summary>
+            Fahrenheit To Celsius
+            </summary>
+            <param name="temperatureFahrenheit"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.Useful.Random">
+            <summary>
+            Class Random for, numbers, string, color, boll
+            </summary>
+        </member>
+        <member name="M:JureHR.Useful.Random.GenerateNumber(System.Int32)">
+            <summary>
+            Generate Number
+            <para>Generates random number and returnes as string</para>
+            </summary>
+            <param name="numLen">Length of generated number</param>
+            <returns>Generated number of specific length</returns>
+        </member>
+        <member name="M:JureHR.Useful.Random.RandomString(System.Int32,System.Boolean)">
+            <summary>
+            Generates a random string with the given length
+            </summary>
+            <param name="size">Size of the string</param>
+            <param name="lowerCase">If true, generate lowercase string</param>
+            <returns>Random string</returns>
+        </member>
+        <member name="M:JureHR.Useful.Random.RandomNumber(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number.
+            </summary>
+            <param name="Minimal">Minimal result</param>
+            <param name="Maximal">Maximal result</param>
+            <returns>Random number</returns>
+        </member>
+        <member name="M:JureHR.Useful.Random.RandomBool">
+            <summary>
+            Returns a random boolean value
+            </summary>
+            <returns>Random boolean value</returns>
+        </member>
+        <member name="M:JureHR.Useful.Random.RandomColor">
+            <summary>
+            Returns a random color
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.Random.RandomDate">
+            <summary>
+            Returns a random date
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.Random.RandomDate(System.DateTime,System.DateTime)">
+            <summary>
+            Returns a random date
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.Useful.VariableManipulation">
+            <summary>
+            Class Variable Manipulation for, conversion, cleaning and formating
+            </summary>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ExtractNumbers(System.String)">
+            <summary>
+            Extract Numbers
+            <para>Data mining for numeric values done by set of successful matches found by iteratively applying a regular expression pattern to the input string</para>
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.IsNumeric(System.String,System.Int32,System.Int32)">
+            <summary>
+            Is Numeric
+            <para>Is Numeric value string, int min, int max</para>
+            </summary>
+            <param name="str"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns>True or False between two values</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.IsNumeric(System.Object)">
+            <summary>
+             Is Numeric
+            <para>The TryParse method converts a string in a specified style and culture-specific format to its double-precision floating point number equivalent. The TryParse method does not generate an exception if the conversion fails. If the conversion passes, True is returned. If it does not, False is returned.</para>
+            </summary>
+            <param name="expression"></param>
+            <returns>Returns True or False</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ValidateInt(System.Object,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Validate given integer value
+            </summary>
+            <param name="Data">pass int value to validate</param>
+            <param name="DefaultVal">default int value</param>
+            <param name="MinVal">Minimum int value allowed</param>
+            <param name="MaxVal">Maximum int value allowed</param>
+            <returns>Validated int value</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.GetNumeric(System.String)">
+            <summary>
+            GetNumeric Function
+            <para>Takes string and try to find int</para>
+            </summary>
+            <param name="expression"></param>
+            <returns>This method will return the digits between the strings, if no digits found it returns 0</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.AlignNumber(System.Int32,System.Int32)">
+            <summary>
+             Align Number
+            </summary>
+            <param name="num"></param>
+            <param name="length"></param>
+            <returns>Returns number with specific length</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.AlignNumber(System.String,System.Int32)">
+            <summary>
+             Align Number
+            </summary>
+            <param name="str"></param>
+            <param name="length"></param>
+            <returns>Returns number with specific length</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.CleanUpPhoneNumber(System.String)">
+            <summary>
+            Clean Up Phone Number
+            <para>Cleans up characteres that people usually type on their phone numbers... the idea is to keep numbers only</para>
+            </summary>
+            <param name="myPhoneString"></param>
+            <returns>Phone number without spaces, dashes...</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ExtractEmails(System.String)">
+            <summary>
+            Extract Emails
+            <para>Data mining for Emails done by set of successful matches found by iteratively applying a regular expression pattern to the input string</para>
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ExtractURLs(System.String)">
+            <summary>
+            Extract URLs
+            <para> Data mining for URLs done by set of successful matches found by iteratively applying a regular expression pattern to the input string.</para>
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.FormatProperCase(System.String)">
+            <summary>
+            method to convert a string to proper case 
+            </summary>
+            <param name="str">value we want converted</param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.AlignString(System.String,System.Int32)">
+            <summary>
+             Align String
+            </summary>
+            <param name="str"></param>
+            <param name="length"></param>
+            <returns>Returns string with specific length</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.CleanUpSQLString(System.String)">
+            <summary>
+            Clean Up SQL String
+            <para>Cleans up SQL command in order to avoid "SQL Injection" attacks.</para>
+            </summary>
+            <param name="mySQLString"></param>
+            <returns>Returns clean SQL string</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.TrimWhiteSpace(System.String)">
+            <summary>
+            Trim White Space
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.StripHTML(System.String)">
+            <summary>
+            Strip HTML
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.CountWords(System.String)">
+            <summary>
+            Count Words is counting the number of words
+            </summary>
+            <param name="word"></param>
+            <returns> return the number of words</returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.HaveBlankChar(System.String)">
+            <summary>
+            Checks for any space in string
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.SortStringLength(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Sorts strings by their length
+            </summary>
+            <param name="stringList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.BreakStringScanWidth(System.String,System.Int32)">
+            <summary>
+            Break string in specific width
+            </summary>
+            <param name="input"></param>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ConvertDigitsToWords(System.String)">
+            <summary>
+            Convert Digits To Words
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ExceptionToText(System.Exception)">
+            <summary>
+            Single Exception Info
+            </summary>
+            <param name="exc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.SingleExceptionInfo(System.Exception)">
+            <summary>
+            Single Exception Info
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ElaborateException(System.Exception)">
+            <summary>
+            Elaborate Exception
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ShortException(System.Exception)">
+            <summary>
+            Short Exception
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.TitleCase(System.String)">
+            <summary>
+            TitleCase
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.VariableManipulation.ToString(System.Object)">
+            <summary>
+            To String - object Can Be Null
+            </summary>
+            <param name="objectCanBeNull"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JureHR.Useful.CreditCardMoney">
+            <summary>
+            Class Credit Card And Money for, format, mask, intrest
+            </summary>
+        </member>
+        <member name="M:JureHR.Useful.CreditCardMoney.FormatMoney(System.String)">
+            <summary>
+             FormatMoney
+            <para>Display two decimal digits (money format)</para>
+            </summary>
+            <param name="str"></param>
+            <returns>Returns two decimal digits (money format)</returns>
+        </member>
+        <member name="M:JureHR.Useful.CreditCardMoney.MaskCreditCardNumber(System.String)">
+            <summary>
+            Mask Credit Card Number
+            <para>Masks creditcard number</para>
+            </summary>
+            <param name="ccnumber"></param>
+            <returns>Credicard number as "********" + last 4 numbers";</returns>
+        </member>
+        <member name="M:JureHR.Useful.CreditCardMoney.FixCCExpiryDate(System.String)">
+            <summary>
+            Fix CC Expiry Date
+            <para>Fix CC Expiry Date</para>
+            </summary>
+            <param name="expiryDate"></param>
+            <returns>CC Expiry Date in 11/11 format</returns>
+        </member>
+        <member name="M:JureHR.Useful.CreditCardMoney.CalculateBasicIntrest(System.Decimal,System.Decimal)">
+            <summary>
+            Calculate Basic Intrest
+            </summary>
+            <param name="principal"></param>
+            <param name="interest"></param>
+            <returns>returns decimal</returns>
+        </member>
+        <member name="M:JureHR.Useful.CreditCardMoney.CalculateBasicIntrest(System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            Calculate Basic Intrest trough years
+            </summary>
+            <param name="principal"></param>
+            <param name="interest"></param>
+            <param name="noYears"></param>
+            <returns>returns List decimal</returns>
+        </member>
+        <member name="T:JureHR.Useful.ImageManipulation">
+            <summary>
+            Class Image Manipulation for, Tumbnails, Bytearay Conversions
+            </summary>
+        </member>
+        <member name="M:JureHR.Useful.ImageManipulation.ImageToByteArray(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Image To ByteArray
+            </summary>
+            <param name="imageIn"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.ImageManipulation.ByteArrayToImage(System.Byte[])">
+            <summary>
+            Byte Array To Image
+            </summary>
+            <param name="byteArrayIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.ImageManipulation.CreateThumbnail(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Create Thumbnail
+            <para>Creates a thumbnail image from a file spec in the calling URL with Width and Height</para>
+            </summary>
+            <param name="ByteArayImage"></param>
+            <param name="thumbWidth"></param>
+            <param name="thumbHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.ImageManipulation.CreateThumbnail(System.Byte[],System.Int32)">
+            <summary>
+            Create Thumbnail
+            <para>Creates a thumbnail image from a file spec in the calling URL with Height and proportional Width</para>
+            </summary>
+            <param name="ByteArayImage"></param>
+            <param name="thumbHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JureHR.Useful.ImageManipulation.MergeImages(System.Drawing.Image,System.Drawing.Image,System.Drawing.Image,System.Drawing.Image)">
+            <summary>
+            Merges 4 Images into 1 Image.
+            </summary>
+            <param name="image1">The Image you want in the Top-Left Corner.</param>
+            <param name="image2">The Image you want in the Top-Right Corner.</param>
+            <param name="image3">The Image you want in the Bottom-Left Corner.</param>
+            <param name="image4">The Image you want in the Bottom-Right Corner.</param>
+            <returns>An Image of 4</returns>
+        </member>
+    </members>
+</doc>
